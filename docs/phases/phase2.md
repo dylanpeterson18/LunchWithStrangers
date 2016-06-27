@@ -9,29 +9,29 @@
 
 ## Flux
 ### Views (React Components)
-* NotesIndex
-  - NotesIndexItem
-* NoteForm
+* LunchesIndex
+  - LunchesIndexItem
+* LunchForm
 
 ### Stores
-* Note
+* Lunches
 
 ### Actions
-* ApiActions.receiveAllNotes -> triggered by ApiUtil
-* ApiActions.receiveSingleNote
-* ApiActions.deleteNote
-* NoteActions.fetchAllNotes -> triggers ApiUtil
-* NoteActions.fetchSingleNote 
-* NoteActions.createNote
-* NoteActions.editNote 
-* NoteActions.destroyNote
+* ApiActions.receiveAllLunches -> triggered by ApiUtil
+* ApiActions.receiveSingleLunch
+* ApiActions.deleteLunch
+* LunchActions.fetchAllLunches -> triggers ApiUtil
+* LunchActions.fetchSingleLunch
+* LunchActions.createLunch
+* LunchActions.editLunch
+* LunchActions.destroyLunch
 
 ### ApiUtil
-* ApiUtil.fetchAllNotes
-* ApiUtil.fetchSingleNote
-* ApiUtil.createNote
-* ApiUtil.editNote
-* ApiUtil.destroyNote
+* ApiUtil.fetchAllLunches
+* ApiUtil.fetchSingleLunch
+* ApiUtil.createLunch
+* ApiUtil.editLunch
+* ApiUtil.destroyLunch
 
 ## Gems/Libraries
 * Flux Dispatcher (npm)

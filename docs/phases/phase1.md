@@ -1,20 +1,20 @@
-# Phase 1: User Authentication, Note Model and JSON API
+# Phase 1: User Authentication, Lunch Model and JSON API
 
 ## Rails
 ### Models
 * User
-* Note
+* Lunch
 
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* Api::NotesController (create, destroy, index, show, update)
+* Api::LunchesController (create, destroy, index, show, update)
 
 ### Views
 * users/new.html.erb
 * session/new.html.erb
-* notes/index.json.jbuilder
-* notes/show.json.jbuilder
+* lunches/index.json.jbuilder
+* lunches/show.json.jbuilder
 
 ## Flux
 ### Views (React Components)
