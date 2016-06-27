@@ -1,4 +1,4 @@
-# FresherNote
+# LunchWithStrangers
 
 [Heroku link][heroku] **Note:** This should be a link to your production site
 
@@ -61,7 +61,7 @@ the API.
 - [ ] create `Lunch` model
 - [ ] seed the database with a small amount of test data
 - [ ] CRUD API for notes (`LunchesController`)
-- [ ] jBuilder views for notes
+- [ ] jBuilder views for cities
 - [ ] setup Webpack & Flux scaffold
 - [ ] setup `APIUtil` to interact with the API
 - [ ] test out API interaction in the console.
@@ -86,39 +86,28 @@ user interface.
 - [ ] position elements on the page
 - [ ] add basic colors & styles
 
-### Phase 5: Cities (1 day, W2 Tu 12pm)
+### Phase 5: Cities (1.5 days, W2 Tu 12pm)
 
 **Objective:** Lunches belong to hosts (users), which belong to cities
 
 - [ ] create `LunchAttendees` model
 - build out API, Flux loop, and components for:
-  - [ ] Cities (show,index - don't need create or update)
+  - [ ] create 'Cities' model (show,index - don't need create or update)
 - Use CSS to style new views
 
 Phase 5 adds organization to the Lunches. Lunches belong to a City,
 which has its own `Index` view.
 
-### Phase 6: Dashboard (1 days, W2 Th 12pm)
+### Phase 6: Dashboard (1 days, W2 Th 6pm)
 
 **Objective:** Lunches that a user has joined can be seen on a user's homepage.
 
-- [ ] create `Tag` model and join table
 - build out API, Flux loop, and components for:
-  - [ ] fetching tags for notebook
-  - [ ] adding tags to notebook
-  - [ ] creating tags while adding to notebooks
-  - [ ] searching notebooks by tag
+  - [ ] fetching lunches for user
+  - [ ] displaying them properly on user page
 - [ ] Style new elements
 
-### Phase 7: Allow Complex Styling in Notes (0.5 days, W2 Th 6pm)
-
-**objective:** Enable complex styling of notes.
-
-- [ ] Integrate `react-quill` (based on Quill.js).
-- [ ] Use Rails helpers to sanitize HTML before rendering.
-
-
-### Phase 8: Styling Cleanup and Seeding (1 day, W2 F 6pm)
+### Phase 7: Styling Cleanup and Seeding (1 day, W2 F 6pm)
 
 **objective:** Make the site feel more cohesive and awesome.
 
@@ -127,11 +116,8 @@ which has its own `Index` view.
 - [ ] Add modals, transitions, and other styling flourishes.
 
 ### Bonus Features (TBD)
-- [ ] Search through notes for blocks of text
-- [ ] Pagination / infinite scroll for Notes Index
-- [ ] Set reminders on notes
-- [ ] Changelogs for Notes
-- [ ] Multiple sessions
+- [ ] Google Map API showing events based on location
+- [ ] Suggestions based on event details and user profiles
 
 [phase-one]: docs/phases/phase1.md
 [phase-two]: docs/phases/phase2.md
