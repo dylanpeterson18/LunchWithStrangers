@@ -3,6 +3,7 @@ const SessionActions = require('../actions/session_actions');
 const SessionStore = require('../store/session_store');
 const ReactRouter = require('react-router');
 const Router = ReactRouter.Router;
+const hashHistory = ReactRouter.hashHistory;
 
 const Login = React.createClass({
   componentDidMount() {
@@ -27,45 +28,52 @@ const Login = React.createClass({
 			username: this.state.username,
 			password: this.state.password
 		};
-
-    if (this.props.location.pathname === "/login") {
-      SessionActions.logIn(formData);
-    } else {
-      SessionActions.logIn(formData);
-    }
+    SessionActions.logIn(formData);
 	},
   formType() {
     return this.props.location.pathname.slice(1);
   },
   redirectIfLoggedIn() {
     if (SessionStore.isUserLoggedIn()) {
-      console.log("you logged in");
+      console.log("logged in");
+      hashHistory.push("/");
     }
+  },
+  guestLogin(){
+    const guestdata = {
+      username: "BarackObama",
+      password: "BarackObama"
+    };
+    SessionActions.logIn(guestdata);
   },
   render(){
 
     return(
     <div className="login-form-container">
-      <form onSubmit={this.handleSubmit}>
       <h2 className="signup-header"> Hey, stranger! </h2>
       <p className="signup-text"> Sign in to set up your next lunch! </p>
-    <div className="login-form">
-      <br />
-        <input type="text"
-          value={this.state.username}
-          onChange={this.usernameChange}
-          className="login-input"
-          placeholder="Username"/>
-        <br/>
-		          <input type="password"
-		            value={this.state.password}
-		            onChange={this.passwordChange}
-								className="login-input"
-                placeholder="Password (at least 6 characters you won't forget!)"/>
-        <br/>
-        <input type="submit" value="Let's Get Lunch" className="commit" />
+      <div className="login-form">
+        <form onSubmit={this.handleSubmit}>
+
+          <input type="text"
+            value={this.state.username}
+            onChange={this.usernameChange}
+            className="login-input"
+            placeholder="Username"/>
+
+  		    <input type="password"
+  		      value={this.state.password}
+  		      onChange={this.passwordChange}
+  					className="login-input"
+            placeholder="Password (at least 6 characters you won't forget!)"/>
+
+          <input type="submit" value="Let's Get Lunch" className="commit" />
+
+
+        </form>
+        <button className="commit" id="guest-login" onClick={this.guestLogin}>Guest Login</button>
       </div>
-      </form>
+
     </div>
     )
 

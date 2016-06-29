@@ -1,0 +1,35 @@
+.login-form-container{
+    position: relative;
+    top: 100px;
+    display: block;
+    margin: auto;
+    width: 350px;
+}
+
+form input {
+  display: block;
+  margin: 0 0 0.8125em 0;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid #DDD;
+  padding-bottom: 1em;
+  padding-top: 10px;
+  max-width: 100%;
+}
+
+.commit {
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: #03a9f4;
+  text-transform: uppercase;
+}
+
+#guest-login{
+  padding: 15px;
+  width: 100%;
+  border: white;
+}
