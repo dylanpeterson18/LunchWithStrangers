@@ -18,8 +18,9 @@ const hashHistory = ReactRouter.hashHistory;
 
 const AppRouter = (
   <Router history={ hashHistory }>
-    <Route path="/" component={Login}>
-    </Route>
+    <Route path="/" component={App}/>
+    <Route path="/login" component={Login}/>
+    <Route path="/signup" component={Login}/>
   </Router>
 )
 
