@@ -86,11 +86,19 @@ body {
   line-height: 39px;
 }
 
+.allthelinks{
+  position: relative;
+  top: 30px;
+  right: -10%;
+}
+
 .link{
   text-transform: uppercase;
   font-weight: 600;
   color: white;
   text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 
