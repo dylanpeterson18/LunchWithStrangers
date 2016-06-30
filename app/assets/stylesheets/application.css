@@ -31,7 +31,6 @@
 .footer-stuff{
   background-color: blue;
     color: white;
-    padding: 20px 50px 20px 50px;
     position: absolute;
     bottom: 0px;
     font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
@@ -50,10 +49,13 @@ input {
 
 body {
   margin: 0px;
+  background-color: rgba(245, 245, 220, 0.47)
 }
 
-p {
+.footer-stuff p {
   padding-left: 0px;
+  margin: auto;
+  padding: 0px 20px 30px 40px;
 }
 
 .header-stuff{

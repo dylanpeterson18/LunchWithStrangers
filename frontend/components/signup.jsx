@@ -3,13 +3,18 @@ const SessionActions = require('../actions/session_actions');
 const SessionStore = require('../store/session_store');
 const ReactRouter = require('react-router');
 const Router = ReactRouter.Router;
+const ErrorStore = require('../store/error_store');
+const hashHistory = ReactRouter.hashHistory;
+
 
 const SignUp = React.createClass({
   componentDidMount() {
     this.sessionListener = SessionStore.addListener(this.redirectIfSignedUp);
+    this.errorListener = ErrorStore.addListener(this.forceUpdate.bind(this));
   },
   componentWillUnmount() {
     this.sessionListener.remove();
+    this.errorListener = ErrorStore.addListener(this.forceUpdate.bind(this));
   },
   getInitialState(){
     return({username: "", password: "", city: ""})
@@ -30,6 +35,16 @@ const SignUp = React.createClass({
 		};
       SessionActions.signUp(formData);
 	},
+  fieldErrors(field) {
+    const errors = ErrorStore.formErrors(this.formType());
+    if (!errors[field]) { return; }
+
+    const messages = errors[field].map( (errorMsg, i) => {
+      return <li key={ i } className="error-messages">{ errorMsg }</li>;
+    });
+
+    return <ul>{ messages }</ul>;
+  },
   formType() {
     return this.props.location.pathname.slice(1);
   },
@@ -52,19 +67,23 @@ const SignUp = React.createClass({
         across the world have sat together for lunch.
         We can't wait for you to join them. </p>
         <div className="login-form">
-          <br />
             <input type="text"
               value={this.state.username}
               onChange={this.usernameChange}
               className="login-input"
               placeholder="Username"/>
-            <br/>
+
     		          <input type="password"
     		            value={this.state.password}
     		            onChange={this.passwordChange}
     								className="login-input"
                     placeholder="Password (at least 6 characters you won't forget!)"/>
-            <br/>
+
+                    { this.fieldErrors("base") }
+                    { this.fieldErrors("password") }
+                    { this.fieldErrors("username") }
+
+
             <div class="form-select-list">
               <select class="form-control" id="sel1" onChange={this.cityChange}>
                 <option hidden>Select a city</option>

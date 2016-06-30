@@ -4,18 +4,38 @@
     display: block;
     margin: auto;
     width: 350px;
+    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
+
+}
+
+.error-messages{
+  list-style: none;
+  color: red;
+}
+
+.placeholder{
+  color: red;
+}
+
+#sel1{
+  height: 100px;
+  width: 200px;
+  position: relative;
+  left: 20%;
+  font-size: larger;
+  bottom: 10px;
 }
 
 form input {
   display: block;
-  margin: 0 0 0.8125em 0;
   width: 100%;
   border-radius: 3px;
   box-shadow: none;
   border: 1px solid #DDD;
-  padding-bottom: 1em;
+  padding-bottom: 15px;
   padding-top: 10px;
   max-width: 100%;
+  margin-bottom: 10px;
 }
 
 .commit {
@@ -26,7 +46,11 @@ form input {
   letter-spacing: 2px;
   background-color: #03a9f4;
   text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
+
 
 #guest-login{
   padding: 15px;

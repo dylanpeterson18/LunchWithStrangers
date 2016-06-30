@@ -4,22 +4,25 @@ const SessionStore = require('../store/session_store');
 const ReactRouter = require('react-router');
 const Router = ReactRouter.Router;
 const hashHistory = ReactRouter.hashHistory;
+const ErrorStore = require('../store/error_store');
 
 const Login = React.createClass({
   componentDidMount() {
+    this.errorListener = ErrorStore.addListener(this.forceUpdate.bind(this));
     this.sessionListener = SessionStore.addListener(this.redirectIfLoggedIn);
   },
   componentWillUnmount() {
     this.sessionListener.remove();
+    this.errorListener.remove();
   },
   getInitialState(){
-    return({username: "", password: ""})
+    return({username: "", password: ""});
   },
   passwordChange(e){
-    this.setState({password: e.currentTarget.value})
+    this.setState({password: e.currentTarget.value});
   },
   usernameChange(e){
-    this.setState({username: e.currentTarget.value})
+    this.setState({username: e.currentTarget.value});
   },
   handleSubmit(e) {
 		e.preventDefault();
@@ -30,6 +33,16 @@ const Login = React.createClass({
 		};
     SessionActions.logIn(formData);
 	},
+  fieldErrors(field) {
+  const errors = ErrorStore.formErrors(this.formType());
+  if (!errors[field]) { return; }
+
+  const messages = errors[field].map( (errorMsg, i) => {
+    return <li key={ i } className="error-messages">{ errorMsg }</li>;
+  });
+
+  return <ul>{ messages }</ul>;
+  },
   formType() {
     return this.props.location.pathname.slice(1);
   },
@@ -55,17 +68,23 @@ const Login = React.createClass({
       <div className="login-form">
         <form onSubmit={this.handleSubmit}>
 
+
           <input type="text"
             value={this.state.username}
             onChange={this.usernameChange}
             className="login-input"
             placeholder="Username"/>
 
+
   		    <input type="password"
   		      value={this.state.password}
   		      onChange={this.passwordChange}
   					className="login-input"
-            placeholder="Password (at least 6 characters you won't forget!)"/>
+            placeholder="Password"/>
+
+          {  this.fieldErrors("base") }
+           { this.fieldErrors("password") }
+           { this.fieldErrors("username") }
 
           <input type="submit" value="Let's Get Lunch" className="commit" />
 
@@ -75,10 +94,10 @@ const Login = React.createClass({
       </div>
 
     </div>
-    )
+  );
 
   }
 
-})
+});
 
 module.exports = Login;

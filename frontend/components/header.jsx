@@ -26,6 +26,9 @@ const Header = React.createClass({
           <li>
             <Link className="link" to="/login">Login</Link>
           </li>
+          <li>
+            <Link className="link" to="/signup">Sign Up</Link>
+          </li>
         </ul>
       </div>
     </div>)
