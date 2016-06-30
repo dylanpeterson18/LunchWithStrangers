@@ -3,6 +3,7 @@ const ReactDOM = require('react-dom');
 const React = require('react');
 const SessionActions = require('./actions/session_actions')
 const SessionStore = require('./store/session_store');
+const CityIndex = require('./components/city_index');
 
 //components
 const App = require('./components/app');
@@ -22,6 +23,7 @@ const AppRouter = (
     <Route path="/" component={App}>
       <Route path="/login" component={Login}/>
       <Route path="/signup" component={SignUp}/>
+      <Route path="/cities" component={CityIndex}/>
     </Route>
   </Router>
 )

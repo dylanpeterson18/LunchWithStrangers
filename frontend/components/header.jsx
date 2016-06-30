@@ -44,7 +44,7 @@ const Header = React.createClass({
           </div>
           <ul>
             <li>
-              Lunch With Strangers
+              <Link className="link" to="/">Lunch With Strangers</Link>
             </li>
           </ul>
         </div>
