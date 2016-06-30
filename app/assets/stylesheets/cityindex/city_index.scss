@@ -1,3 +1,37 @@
 .city-image{
-    background-image: url('http://s3.amazonaws.com/tws-production-paperclip/cities/header_bgs/000/000/021/small/image.jpg?1413022522');
+  background-repeat: no-repeat;
+  // background-image: url('http://s3.amazonaws.com/tws-production-paperclip/cities/header_bgs/000/000/021/small/image.jpg?1413022522');
+}
+
+.city{
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+
+  position: relative;
+  height: 160px;
+  margin-bottom: 18px;
+}
+
+.city-image{
+  width: 100%;
+  height: 100%;
+}
+
+
+.city-name{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: absolute;
+  text-align: center;
+}
+.city-index::after{
+  clear: both;
+  content: "";
+  display: table;
 }
