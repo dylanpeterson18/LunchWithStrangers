@@ -84,8 +84,8 @@ const SignUp = React.createClass({
                     { this.fieldErrors("username") }
 
 
-            <div class="form-select-list">
-              <select class="form-control" id="sel1" onChange={this.cityChange}>
+            <div className="form-select-list">
+              <select className="form-control" id="sel1" onChange={this.cityChange}>
                 <option hidden>Select a city</option>
                 <option>Boston</option>
                 <option>Los Angeles</option>
