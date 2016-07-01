@@ -10,9 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+//= require_tree .
  */
+
 
 .navlinks{
   position: absolute;
@@ -30,12 +31,13 @@
 
 .footer-stuff{
   background-color: blue;
-    color: white;
-    position: absolute;
-    bottom: 0px;
-    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
-    line-height: 1.625;
-    -webkit-font-smoothing: antialiased;
+  color: white;
+  /* position: absolute; */
+  /* bottom: 0px; */
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
 
 input {
@@ -45,11 +47,13 @@ input {
 
 .footer{
   width: 100%;
+  position: absolute;
+  bottom: 0px;
 }
 
 body {
   margin: 0px;
-  background-color: rgba(245, 245, 220, 0.47)
+  background-color: rgba(179, 179, 179, 0.47);
 }
 
 .footer-stuff p {
@@ -60,14 +64,14 @@ body {
 
 .header-stuff{
   background-color: blue;
-    color: white;
-    position: absolute;
-    top: 0px;
-    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
-    line-height: 1.625;
-    -webkit-font-smoothing: antialiased;
-    width: 100%;
-    min-width: 600px;
+  color: white;
+  /* position: absolute; */
+  /* top: 0px; */
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  min-width: 600px;
 }
 
 .header-stuff li{

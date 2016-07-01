@@ -1,37 +1,69 @@
-.city-image{
+/* line 1, /Users/floridakid411/Desktop/TWS/app/assets/stylesheets/cityindex/city_index.scss */
+.city-image {
   background-repeat: no-repeat;
-  // background-image: url('http://s3.amazonaws.com/tws-production-paperclip/cities/header_bgs/000/000/021/small/image.jpg?1413022522');
 }
 
-.city{
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-
-  position: relative;
+/* line 6, /Users/floridakid411/Desktop/TWS/app/assets/stylesheets/cityindex/city_index.scss */
+.city {
+  width: 41%;
   height: 160px;
-  margin-bottom: 18px;
+  margin: 10px;
 }
 
-.city-image{
-  width: 100%;
-  height: 100%;
+.find-you{
+  font-weight: 600;
+  font-size: 2.5em;
+  color: #5C5C5C;
 }
 
-
-.city-name{
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  position: absolute;
+.city-header{
   text-align: center;
+  margin-top: 51px;
+  margin-bottom: 39px;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+  line-height: 1.25;
 }
-.city-index::after{
+
+/* line 17, /Users/floridakid411/Desktop/TWS/app/assets/stylesheets/cityindex/city_index.scss */
+.city-image {
+  /* width: 100%; */
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: .7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.city:hover{
+  color: transparent;
+}
+
+/* line 24, /Users/floridakid411/Desktop/TWS/app/assets/stylesheets/cityindex/city_index.scss */
+.city-image:hover {
+  opacity: 1.0;
+}
+
+/* line 29, /Users/floridakid411/Desktop/TWS/app/assets/stylesheets/cityindex/city_index.scss */
+.city-name {
+  color: white;
+  font-weight: 600;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* line 46, /Users/floridakid411/Desktop/TWS/app/assets/stylesheets/cityindex/city_index.scss */
+.city-index::after {
   clear: both;
   content: "";
   display: table;
+}
+
+.city-index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

@@ -1,3 +1,46 @@
 // Place all the styles related to the Cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.one-city{
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.one-city-image{
+  height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    line-height: 1.625;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.one-city-name{
+  margin: 10px;
+  font-size: 39px;
+}
+
+.one-city-image p{
+  margin: 7px;
+}
+
+.one-city-color{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 123, 255, 0.66);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 16px;
+}

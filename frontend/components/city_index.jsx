@@ -1,4 +1,5 @@
 const React = require('react');
+const Link = require('react-router').Link;
 
 const CityIndex = React.createClass({
   getInitialState: function () {
@@ -8,22 +9,28 @@ const CityIndex = React.createClass({
     console.log("component did mount yay!")
     $.get("/api/cities", function (cities) {
       this.setState({cities: cities});
-    }.bind(this), console.log("ajax error?"))
+    }.bind(this), console.log("ajax error from city index ComDidMount"))
       console.log("state:" + this.state);
   },
   render(){
     const backgroundImage = "background-image";
     return(
+    <div className="city-container">
+    <div className="city-header">
+      <h1 className="find-you">Where can we find you?</h1>
+      <p className="choose-city">Choose the city where you'd
+      like to join for lunch</p>
+    </div>
     <div className="city-index">
+
     {this.state.cities.map( function(city) {
     return (
       <div className="city">
         <div className="city-image" style={{backgroundImage: `url(${city.image_url})`}}>
 
             <h2 className="city-name">
-              <a className="background-filter"
-                href={`cities/${city.id}`}>Hello</a>
-              <a className="city-name" href={`cities/${city.id}`}>{city.name}</a>
+              <Link className="background-filter" to={`cities/${city.id}`}></Link>
+              <Link className="city-name" to={`cities/${city.id}`}>{city.name}</Link>
             </h2>
 
 
@@ -31,6 +38,7 @@ const CityIndex = React.createClass({
       </div>
       );
       }, this)}
+    </div>
     </div>
     )
   },
