@@ -1,0 +1,2 @@
+module LunchEventsHelper
+end
