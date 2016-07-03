@@ -5,8 +5,26 @@
   height: 300px;
   display: flex;
   align-items: center;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.massive-block{
+  width: 600px;
+  height: 500px;
+}
+
+.x{
+  background-color: #03a9f4;
+  border-radius: 6px;
+  color: white;
+  border: none;
+}
+
+.x:hover{
+  cursor: pointer;
+}
 .one-city-image{
   height: 100%;
     width: 100%;

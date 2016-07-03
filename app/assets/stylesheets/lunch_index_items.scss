@@ -1,0 +1,38 @@
+.lunch-item-box{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: #FEFEFE;
+  border: 1px solid #DDD;
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 1.625;
+  border-color: lightblue;
+  margin: 20px;
+}
+
+.lunch-item-box{
+  text-transform: uppercase;
+  text-align: center;
+  float: left;
+}
+
+.lunch-item-place{
+  color: #929292;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.lunch-item-date-time{
+  font-weight: 600;
+}
+
+.lunch-item-day{
+  color: #929292;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.lunch-item-date{
+  font-size: 1.25em;
+}

@@ -1,44 +1,36 @@
 var React = require('react');
 var moment = require('moment');
+const LunchActions = require('../actions/lunch_actions');
 
 import { DateField, Calendar } from 'react-date-picker';
 
 const LunchForm = React.createClass({
   getInitialState(){
-    return({date: "", place: "", time: "", details:""})
+    return({date_time: {}, place: "", details:""})
   },
   placeChange(e){
     this.setState({place: e.currentTarget.value})
   },
-  timeChange(e){
-    this.setState({time: e.currentTarget.value})
-  },
   detailsChange(e){
     this.setState({details: e.currentTarget.value})
   },
-  onChange(dateString, { dateMoment, timestamp }){
-    console.log(dateString)
+  dateChange(dateString, { dateMoment, timestamp }){
+    this.setState({date_time: dateMoment})
+    console.log(dateMoment);
   },
   handleSubmit(e) {
     e.preventDefault();
 
     const formData = {
-      date: this.state.date,
+      date_time: this.state.date_time.toString(),
       place: this.state.place,
-      time: this.state.time
+      details: this.state.details,
+      host_id: 1,
+      city_id: this.props.city.id
     };
-    $.ajax({
-      url: `/api/lunch_events`,
-      type: "POST",
-      data: formData,
-      success(city) {
-      console.log("code worked- you're so smart and amazing!")
-      },
-      error(city){
-      console.log("create a lunch failedddd: you're pathetic you can't
-      code a simple ajax request")
-      console.log("this is the city you tried sending:"+city)
-    )}
+    LunchActions.createLunch(formData);
+    this.setState({date_time: {}, place: "", details:""})
+
   },
   render(){
     return(
@@ -66,9 +58,9 @@ const LunchForm = React.createClass({
         <DateField
             placeholderText="Click to select a date"
             minDate={moment()}
-            maxDate={moment().add(2, 'months')}
+            maxDate={moment().add(4, 'months')}
             dateFormat="MM-DD-YYYY hh:mm a"
-            onChange={this.onChange}/>
+            onChange={this.dateChange}/>
         <input type="submit" value="Create Your Lunch" className="commit" />
       </form>
     </div>

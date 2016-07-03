@@ -1,5 +1,5 @@
 class LunchEvent < ActiveRecord::Base
-  validates :date, :place, :time, :host_id, :city_id, presence: true
+  validates :date_time, :place, :host_id, :city_id, presence: true
 
   belongs_to :city
 

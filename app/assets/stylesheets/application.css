@@ -54,6 +54,9 @@ input {
 body {
   margin: 0px;
   background-color: rgba(179, 179, 179, 0.47);
+  font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
 }
 
 .footer-stuff p {

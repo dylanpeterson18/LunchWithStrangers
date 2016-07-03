@@ -10,6 +10,7 @@ const Login = require('./components/login');
 const SignUp = require('./components/signup');
 const CityShow = require('./components/city_show');
 const CityIndex = require('./components/city_index');
+const LunchForm = require('./components/lunch_form');
 
 //Router
 const ReactRouter = require('react-router');
@@ -28,6 +29,7 @@ const AppRouter = (
       <Route path="/signup" component={SignUp}/>
       <Route path="/cities" component={CityIndex}/>
       <Route path="/cities/:id" component={CityShow}/>
+      <Route path="/lunch_events" component={LunchForm}/>
     </Route>
   </Router>
 )
