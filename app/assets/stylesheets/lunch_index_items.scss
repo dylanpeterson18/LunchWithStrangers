@@ -11,6 +11,12 @@
   margin: 20px;
 }
 
+.lunch-index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .lunch-item-box{
   text-transform: uppercase;
   text-align: center;
@@ -19,8 +25,10 @@
 
 .lunch-item-place{
   color: #929292;
-  font-size: 0.9em;
-  text-align: center;
+  font-size: 0.8em;
+  text-align: left;
+  padding: 18px;
+  text-transform: none;
 }
 
 .lunch-item-date-time{
@@ -35,4 +43,74 @@
 
 .lunch-item-date{
   font-size: 1.25em;
+}
+
+.lunch-index-item {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.lunch-item-join-button{
+  display: flex;
+  justify-content: center;
+}
+
+#join-lunch-button{
+  width: 70%;
+  height: 52px;
+}
+
+#joined-lunch-button{
+  width: 70%;
+  height: 52px;
+  background-color: #05bd48;
+}
+
+#join-lunch-button:hover {
+    background-color: #1a81d4;
+}
+
+
+
+#host-own-lunch-button{
+  width: 100%;
+  height: 50px;
+}
+#host-own-lunch-button:hover{
+  background-color: #1a81d4;
+}
+
+.what-is-lt-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #dcd8cc;
+}
+
+.lt-part {
+    width: 30%;
+    margin-right: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #faf6e8;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+h1.lt-basics, h2.lt-basics {
+  text-align: center;
+  color: #0171ca;
+  margin: 1px;
+  padding: 3px;
+}
+
+p.lt-basics-text {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: auto;
+    padding-left: 7px;
+    padding-right: 7px;
 }

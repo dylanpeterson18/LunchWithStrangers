@@ -11,6 +11,7 @@ const SignUp = require('./components/signup');
 const CityShow = require('./components/city_show');
 const CityIndex = require('./components/city_index');
 const LunchForm = require('./components/lunch_form');
+const Dashboard = require('./components/dashboard');
 
 //Router
 const ReactRouter = require('react-router');
@@ -30,15 +31,17 @@ const AppRouter = (
       <Route path="/cities" component={CityIndex}/>
       <Route path="/cities/:id" component={CityShow}/>
       <Route path="/lunch_events" component={LunchForm}/>
+      <Route path="/dashboard" component={Dashboard}/>
     </Route>
   </Router>
-)
+);
 
 document.addEventListener('DOMContentLoaded', function() {
-  Modal.setAppElement(document.body)
+  SessionActions.receiveUser(window.currentUser);
+  Modal.setAppElement(document.body);
   const root = document.getElementById('content');
   ReactDOM.render(AppRouter, root);
 });
 
-window.SessionActions = SessionActions;
-window.SessionStore = SessionStore;
+// window.SessionActions = SessionActions;
+// window.SessionStore = SessionStore;

@@ -9,6 +9,20 @@ class Api::UsersController < ApplicationController
 		end
 	end
 
+  def show
+
+    if current_user.nil?
+      # let them log in
+      redirect_to new_session_url
+      return
+    end
+
+    @user = current_user
+
+
+    render :show
+  end
+
 	private
 
 	def user_params

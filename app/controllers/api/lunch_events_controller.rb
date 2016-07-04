@@ -3,7 +3,9 @@ class Api::LunchEventsController < ApplicationController
 		@lunch = LunchEvent.new(lunch_params)
 		if !@lunch.save
 			render json: @lunch.errors, status: 422
-		end
+		else
+      render 'api/lunch_events/show'
+    end
 	end
 
   def index

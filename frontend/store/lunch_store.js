@@ -11,7 +11,6 @@ const resetLunches = function (lunches) {
   lunches.forEach(function (lunch) {
     _lunches[lunch.id] = lunch;
   });
-  debugger
 };
 
 const setLunch = function (lunch) {

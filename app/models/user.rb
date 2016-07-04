@@ -6,6 +6,12 @@ class User < ActiveRecord::Base
 
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness
+
+  has_many :lunch_attendees
+  has_many :lunches, through: :lunch_attendees, source: :lunch_event
+  has_many :hosted_lunches, class_name: "LunchEvent", foreign_key: "host_id",
+  primary_key: "id"
+
   attr_reader :password
 
   def password= password

@@ -3,6 +3,10 @@ const Modal = require('react-modal');
 const ModalStyle = require("./modal_style");
 const LunchForm = require('./lunch_form');
 const LunchIndex = require('./lunch_index');
+const ReactRouter = require('react-router');
+const hashHistory = ReactRouter.hashHistory;
+const SessionStore = require('../store/session_store');
+const LunchStore = require('../store/lunch_store');
 
 const CityShow = React.createClass({
   getInitialState: function () {
@@ -16,12 +20,23 @@ const CityShow = React.createClass({
       console.log("state:" + this.state);
   },
   _handleClick(){
-    this.setState({modalOpen: true});
+    if(SessionStore.isUserLoggedIn()){
+      this.setState({modalOpen: true});
+    } else {
+      hashHistory.push('/login');
+    }
+
   },
   onModalClose(){
     this.setState({modalOpen: false});
   },
   render(){
+    let hostEventText = "hi";
+    if(SessionStore.isUserLoggedIn()){
+      hostEventText="Host Your Own Lunch";
+    } else {
+      hostEventText="Sign In To Host Your Own Lunch";
+    }
     if(!this.state.city.id){
       return(<div/>);
     } else {
@@ -35,19 +50,41 @@ const CityShow = React.createClass({
         </div>
 
         <div className="host-event-container">
-          <button className="commit" onClick={this._handleClick}>
-          Host Your Own Lunch
+          <button id="host-own-lunch-button" className="commit" onClick={this._handleClick}>
+          {hostEventText}
           </button>
+        </div>
+
+        <div className="what-is-lt-wrapper">
+          <div className="what-is-lt-container">
+            <div className="lt-part">
+              <h2 className="lt-basics">Show Up</h2>
+              <p className="lt-basics-text">You and a few others
+              join a host at lunch spot.</p>
+            </div>
+            <div className="lt-part">
+            <h2 className="lt-basics">Be Present</h2>
+              <p className="lt-basics-text">Engage. Be yourself. Meet
+              cool people. </p>
+            </div>
+            <div className="lt-part">
+            <h2 className="lt-basics">See What Happens</h2>
+              <p className="lt-basics-text">
+              Make lifelong friends. Or have one enjoyable lunch.
+              No strings attached.</p>
+            </div>
+          </div>
 
 
         </div>
-        <LunchIndex/>
+        <LunchIndex cityid={this.props.params.id}/>
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
           style={ModalStyle}>
           <button className="x" onClick={this.onModalClose}>X</button>
-            <LunchForm city={this.state.city}/>
+            <LunchForm city={this.state.city} closeModal={this.onModalClose}/>
+
         </Modal>
         <div className="massive-block"/>
       </div>

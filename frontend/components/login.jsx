@@ -54,8 +54,8 @@ const Login = React.createClass({
   },
   guestLogin(){
     const guestdata = {
-      username: "BarackObama",
-      password: "BarackObama"
+      username: "barack",
+      password: "barack"
     };
     SessionActions.logIn(guestdata);
   },

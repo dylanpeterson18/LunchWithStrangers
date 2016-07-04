@@ -1,0 +1,55 @@
+.lunches-cont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
+
+.lunches-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+}
+.dashboard-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome {
+    display: flex;
+}
+
+.quotes {
+    padding: 20px;
+    margin: 0px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+
+.dashboard-lunch-index{
+    margin-top: 37px;
+    margin-bottom: 90px;
+    padding-bottom: 30px;
+}
+
+.control-panel{
+    margin: 24px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cool-people{
+    text-align: center;
+    font-weight: 300;
+}

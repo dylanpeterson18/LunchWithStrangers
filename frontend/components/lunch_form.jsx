@@ -1,6 +1,8 @@
 var React = require('react');
 var moment = require('moment');
 const LunchActions = require('../actions/lunch_actions');
+const CityShow = require('./city_show');
+const SessionStore = require('../store/session_store');
 
 import { DateField, Calendar } from 'react-date-picker';
 
@@ -20,12 +22,12 @@ const LunchForm = React.createClass({
   },
   handleSubmit(e) {
     e.preventDefault();
-
+    this.props.closeModal();
     const formData = {
       date_time: this.state.date_time.toString(),
       place: this.state.place,
       details: this.state.details,
-      host_id: 1,
+      host_id: SessionStore.currentUser().id,
       city_id: this.props.city.id
     };
     LunchActions.createLunch(formData);

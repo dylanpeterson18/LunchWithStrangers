@@ -11,12 +11,14 @@ const LunchIndex = React.createClass({
 
   componentDidMount () {
     this.lunchListener = LunchStore.addListener(this.getLunches);
-    console.log("got to component did mount");
+    this.lunchListener2 = LunchStore.addListener(this.forceUpdate.bind(this));
+    console.log("mounted Lunch Index");
     LunchActions.fetchLunches();
   },
 
   componentWillUnmount () {
     this.lunchListener.remove();
+    this.lunchListener2.remove();
   },
 
   getLunches () {
@@ -24,29 +26,27 @@ const LunchIndex = React.createClass({
   },
 
   render () {
+    const cityid = this.props.cityid;
     if(!this.state.lunches){
       return(<div>THERE ARE NO LUNCHES</div>);
     } else {
       return (
         <div className="lunch-index">
-          <ul>
+
             {
-              this.state.lunches.map(function (lunch) {
-                return (<LunchIndexItem key={lunch.id} lunch={lunch} />);
+              this.state.lunches.map((lunch) =>{
+                if(lunch.city_id.toString() === cityid){
+                  return (<LunchIndexItem key={lunch.id} lunch={lunch} />);
+                }
               })
             }
-          </ul>
+
 
         </div>
       );
     }
   }
 });
-// return(<div>
-//   WE HAVE LUNCHES
-//   {lunch.place}
-//   {lunch.date_time}
-//   {lunch.details}
-// </div>);
+
 
 module.exports = LunchIndex;

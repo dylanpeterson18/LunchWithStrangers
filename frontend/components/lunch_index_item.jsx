@@ -1,4 +1,5 @@
 const React = require('react');
+const JoinToggle = require('./join_toggle');
 
 const weekDays = {
   0: "Sunday",
@@ -55,15 +56,11 @@ const LunchIndexItem = React.createClass({
             </div>
           </div>
           <div className="lunch-item-place">
-            place: {lunch.place}
-          </div>
-          <div className="lunch-item-details">
-            details: {lunch.details}
+            {lunch.place}
           </div>
         </div>
-        <div className="lunch-item-join-button">
-           <button className="commit">Join</button>
-        </div>
+        <JoinToggle lunch={lunch}/>
+
       </div>
     );
   }

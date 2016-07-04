@@ -33,7 +33,11 @@ SessionStore.currentUser = function() {
 };
 
 SessionStore.isUserLoggedIn = function() {
-  return !!_currentUser.id;
+  if(_currentUser && _currentUser.id){
+    return true;
+  } else {
+    return false;
+  }
 };
 
 module.exports = SessionStore;
