@@ -19,8 +19,9 @@ const JoinToggle = React.createClass({
     this.lsListener.remove();
   },
   determineButtonText(){
-    const userId = SessionStore.currentUser().id;
+
     if(SessionStore.isUserLoggedIn()){
+      const userId = SessionStore.currentUser().id;
       if(this.props.lunch.host_id === userId){
         this.setState({joinState: "YOU'RE HOSTING THIS", joinId:"joined-lunch-button" });
       }

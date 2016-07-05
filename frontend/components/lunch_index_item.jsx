@@ -27,6 +27,7 @@ const months = {
 };
 
 const LunchIndexItem = React.createClass({
+  
   render(){
     let lunch = this.props.lunch;
     let date = new Date(lunch.date_time);
