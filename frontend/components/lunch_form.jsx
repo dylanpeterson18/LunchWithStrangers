@@ -8,7 +8,7 @@ const SessionStore = require('../store/session_store');
 
 const LunchForm = React.createClass({
   getInitialState(){
-    return({date_time: {}, place: "", details:"", time: ""})
+    return({date_time: {}, place: "", details:"", time: ""});
   },
   placeChange(e){
     this.setState({place: e.currentTarget.value});

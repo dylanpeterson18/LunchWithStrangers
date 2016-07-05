@@ -8,7 +8,6 @@ const App = React.createClass({
     return(
     <div>
       <Header/>
-      <Homepage/>
       {this.props.children}
       <div className="footer">
         <div className="footer-stuff">
@@ -21,10 +20,10 @@ const App = React.createClass({
         </div>
       </div>
     </div>
-    )
+  );
 
   }
 
-})
+});
 
 module.exports = App;

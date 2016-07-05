@@ -7,13 +7,21 @@ const hashHistory = ReactRouter.hashHistory;
 
 const JoinToggle = React.createClass({
 
+
   getInitialState(){
     if(SessionStore.isUserLoggedIn()){
-      return({joinState: "JOIN"});
+      if(this.props.lunch.host_id === SessionStore.currentUser().id){
+        joinId = "joined-lunch-button";
+        return({joinState: "YOU'RE HOSTING THIS"});
+      }
+      else if(!this.props.lunch.attendees || this.props.lunch.attendees.id.indexOf(SessionStore.currentUser().id) === -1 ){
+        return({joinState: "JOIN"});
+      } else {
+        return({joinState: "JOINED!"});
+      }
     } else {
       return({joinState: "SIGN IN TO SCHEDULE"});
     }
-
   },
 
   onClick(e){

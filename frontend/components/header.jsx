@@ -24,6 +24,7 @@ const Header = React.createClass({
     return(
       <div className="allthelinks">
         <Link className="link" to="/cities">Cities</Link>
+        <Link className="link" to="/dashboard">Dashboard</Link>
         <a className="link" onClick={ this._handleLogOut }>LogOut</a>
       </div>
     );
@@ -31,7 +32,6 @@ const Header = React.createClass({
       return (
         <div className="allthelinks">
             <Link className="link" to="/cities">Cities</Link>
-            <Link className="link" to="/dashboard">Guest Login</Link>
             <Link className="link" to="/login">Login</Link>
             <Link className="link" id="signup-link" to="/signup">Sign Up</Link>
         </div>
@@ -57,5 +57,7 @@ const Header = React.createClass({
   }
 
 });
+
+// <Link className="link" to="/dashboard">Guest Login</Link>
 
 module.exports = Header;

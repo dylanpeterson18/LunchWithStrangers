@@ -12,6 +12,7 @@ const CityShow = require('./components/city_show');
 const CityIndex = require('./components/city_index');
 const LunchForm = require('./components/lunch_form');
 const Dashboard = require('./components/dashboard');
+const Homepage = require('./components/homepage');
 
 //Router
 const ReactRouter = require('react-router');
@@ -26,6 +27,7 @@ const Modal = require('react-modal');
 const AppRouter = (
   <Router history={ hashHistory }>
     <Route path="/" component={App}>
+      <IndexRoute component={Homepage}/>
       <Route path="/login" component={Login}/>
       <Route path="/signup" component={SignUp}/>
       <Route path="/cities" component={CityIndex}/>

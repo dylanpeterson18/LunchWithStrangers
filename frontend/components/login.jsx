@@ -49,13 +49,13 @@ const Login = React.createClass({
   redirectIfLoggedIn() {
     if (SessionStore.isUserLoggedIn()) {
       console.log("logged in");
-      hashHistory.push("/");
+      hashHistory.push("/dashboard");
     }
   },
   guestLogin(){
     const guestdata = {
-      username: "barack",
-      password: "barack"
+      username: "TaylorSwift",
+      password: "TaylorSwift"
     };
     SessionActions.logIn(guestdata);
   },

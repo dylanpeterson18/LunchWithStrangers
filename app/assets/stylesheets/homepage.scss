@@ -18,3 +18,27 @@
     flex-direction: column;
     justify-content: center;
 }
+
+#home-signup{
+  background-color: darkblue;
+  text-decoration: none;
+  width: 28%;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+#homepage-header{
+  font-weight: 400;
+  margin-top: 70px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+#homepage-text{
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
