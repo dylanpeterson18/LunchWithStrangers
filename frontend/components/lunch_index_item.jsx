@@ -32,7 +32,7 @@ const LunchIndexItem = React.createClass({
     let date = new Date(lunch.date_time);
     let day = weekDays[date.getDay()];
     let month = months[date.getMonth()] + " " + date.getDate();
-    let time;
+    let time = lunch.time;
 
 
     return(
@@ -40,8 +40,10 @@ const LunchIndexItem = React.createClass({
       <div className="lunch-index-item">
         <div className="lunch-item-box">
           <div className="lunch-item-top">
-            
+
             <div className="lunch-item-date-time">
+              <div>
+              </div>
               <div className="lunch-item-day">
                 {day}
               </div>

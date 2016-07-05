@@ -15,6 +15,6 @@ class Api::LunchEventsController < ApplicationController
 	private
 
 	def lunch_params
-		params.require(:lunch_events).permit(:date_time, :place, :host_id, :city_id, :details)
+		params.require(:lunch_events).permit(:date_time, :place, :host_id, :city_id, :details, :time)
 	end
 end
