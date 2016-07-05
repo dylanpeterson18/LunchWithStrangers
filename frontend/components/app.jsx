@@ -1,5 +1,6 @@
 const React = require('react');
 const Header = require('./header');
+const Homepage = require('./homepage');
 
 const App = React.createClass({
 
@@ -7,6 +8,7 @@ const App = React.createClass({
     return(
     <div>
       <Header/>
+      <Homepage/>
       {this.props.children}
       <div className="footer">
         <div className="footer-stuff">

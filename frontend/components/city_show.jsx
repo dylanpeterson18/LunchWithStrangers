@@ -74,9 +74,19 @@ const CityShow = React.createClass({
               No strings attached.</p>
             </div>
           </div>
-
-
         </div>
+
+        <div className="join-for-lunch-wrapper">
+          <div className="join-for-lunch-container">
+            <h2 className="lt-basics">Join for lunch time in the next few months!</h2>
+            <p className="lt-basics-text">
+              Every tea time is brought together by someone in our host
+               community that gets it. Each of them was brought on by hosts
+               before them. They’re all awesome.
+            </p>
+          </div>
+        </div>
+
         <LunchIndex cityid={this.props.params.id}/>
         <Modal
           isOpen={this.state.modalOpen}
@@ -86,7 +96,6 @@ const CityShow = React.createClass({
             <LunchForm city={this.state.city} closeModal={this.onModalClose}/>
 
         </Modal>
-        <div className="massive-block"/>
       </div>
     );
 

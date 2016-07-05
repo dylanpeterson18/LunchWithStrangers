@@ -2,10 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .one-city{
-  height: 300px;
   display: flex;
   align-items: center;
-  display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -26,7 +24,7 @@
   cursor: pointer;
 }
 .one-city-image{
-  height: 100%;
+  height: 400px;
     width: 100%;
     display: flex;
     align-items: center;

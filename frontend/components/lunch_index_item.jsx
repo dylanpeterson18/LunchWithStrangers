@@ -40,9 +40,7 @@ const LunchIndexItem = React.createClass({
       <div className="lunch-index-item">
         <div className="lunch-item-box">
           <div className="lunch-item-top">
-            <div className="lunch-item-host-container">
-              hostid: {this.props.lunch.host_id}
-            </div>
+            
             <div className="lunch-item-date-time">
               <div className="lunch-item-day">
                 {day}
