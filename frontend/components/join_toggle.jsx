@@ -2,25 +2,35 @@ const React = require('react');
 const SessionStore = require('../store/session_store');
 const ReactRouter = require('react-router');
 const hashHistory = ReactRouter.hashHistory;
-
-  var joinId = "join-lunch-button";
+const LunchStore = require('../store/lunch_store');
+// && this.props.lunch.attendees.id.indexOf(SessionStore.currentUser().id) !== -1
 
 const JoinToggle = React.createClass({
 
 
   getInitialState(){
+    return({joinState: "SIGN IN TO SCHEDULE", joinId : "join-lunch-button"});
+
+  },
+  componentDidMount(){
+    this.lsListener = LunchStore.addListener(this.determineButtonText);
+  },
+  componentWillUnmount(){
+    this.lsListener.remove();
+  },
+  determineButtonText(){
+    const userId = SessionStore.currentUser().id;
     if(SessionStore.isUserLoggedIn()){
-      if(this.props.lunch.host_id === SessionStore.currentUser().id){
-        joinId = "joined-lunch-button";
-        return({joinState: "YOU'RE HOSTING THIS"});
+      if(this.props.lunch.host_id === userId){
+        this.setState({joinState: "YOU'RE HOSTING THIS", joinId:"joined-lunch-button" });
       }
-      else if(!this.props.lunch.attendees || this.props.lunch.attendees.id.indexOf(SessionStore.currentUser().id) === -1 ){
-        return({joinState: "JOIN"});
+      else if(LunchStore.isUserAttendee(userId, this.props.lunch.id)){
+        this.setState({joinState: "JOINED!", joinId: "joined-lunch-button"});
       } else {
-        return({joinState: "JOINED!"});
+        this.setState({joinState: "JOIN", joinId : "join-lunch-button"});
       }
     } else {
-      return({joinState: "SIGN IN TO SCHEDULE"});
+      this.setState({joinState: "SIGN IN TO SCHEDULE", joinId : "join-lunch-button"});
     }
   },
 
@@ -37,8 +47,7 @@ const JoinToggle = React.createClass({
       data: {lunch_attendees: {lunch_id: this.props.lunch.id,
       user_id: SessionStore.currentUser().id}},
       success: ()=> {
-        joinId="join-lunch-button";
-        this.setState({joinState: "JOIN"});
+        this.setState({joinState: "JOIN", joinId:"join-lunch-button"});
       }
     });
     } else if (this.state.joinState === "JOIN"){
@@ -52,8 +61,7 @@ const JoinToggle = React.createClass({
       data: {lunch_attendees: {lunch_id: this.props.lunch.id,
       user_id: SessionStore.currentUser().id}},
       success: ()=> {
-        joinId="joined-lunch-button";
-        this.setState({joinState: "JOINED!"});
+        this.setState({joinState: "JOINED!", joinId:"joined-lunch-button"});
 
       }
     });
@@ -62,7 +70,7 @@ const JoinToggle = React.createClass({
   render(){
     return(
       <div className="lunch-item-join-button">
-         <button id={joinId} className="commit"
+         <button id={this.state.joinId} className="commit"
            onClick={this.onClick}
            >{this.state.joinState}</button>
       </div>

@@ -17,6 +17,18 @@ const setLunch = function (lunch) {
   _lunches[lunch.id] = lunch;
 };
 
+LunchStore.isUserAttendee = function(userId, lunchId){
+  debugger
+    if(_lunches[lunchId] === undefined){
+      return false;
+    }
+     _lunches[lunchId].attendees.forEach( (attendee) =>{
+       if(attendee.id === userId){
+         return true;
+       }
+     });
+     return false;
+};
 
 LunchStore.all = function () {
   return Object.keys(_lunches).map(function (lunchId) {
