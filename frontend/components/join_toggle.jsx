@@ -9,7 +9,7 @@ const JoinToggle = React.createClass({
 
 
   getInitialState(){
-    return({joinState: "SIGN IN TO SCHEDULE", joinId : "join-lunch-button"});
+    return({joinState: "JOIN", joinId : "join-lunch-button"});
 
   },
   componentDidMount(){
