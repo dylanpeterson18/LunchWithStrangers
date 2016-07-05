@@ -17,7 +17,6 @@ const LunchForm = React.createClass({
     this.setState({details: e.currentTarget.value});
   },
   dateChange(dateString, { dateMoment, timestamp }){
-    debugger
     this.setState({date_time: dateMoment});
     console.log(dateMoment);
   },
@@ -63,12 +62,12 @@ const LunchForm = React.createClass({
             placeholder="e.g. The reservation is under Dylan! We'll be
             in the back room."/>
 
-          <DateField
-                placeholderText="Click to select a date"
-                minDate={moment()}
-                maxDate={moment().add(4, 'months')}
-                dateFormat="MM-DD-YYYY"
-                onChange={this.dateChange}/>
+            <DateField
+                  placeholderText="Click to select a date"
+                  minDate={moment()}
+                  maxDate={moment().add(4, 'months')}
+                  dateFormat="MM-DD-YYYY"
+                  onChange={this.dateChange}/>
 
           <select className="select-time" onChange={this.timeChange}>
             <option value="10:00 AM">10:00 AM</option>
