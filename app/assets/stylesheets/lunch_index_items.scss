@@ -33,6 +33,10 @@
   text-transform: none;
 }
 
+.lunch-item-time{
+  color: gray;
+}
+
 .lunch-item-date-time{
   font-weight: 600;
 }
@@ -52,6 +56,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin: 0px 10px 0px 10px;
+    min-width: 220px;
+    max-width: 250px;
 }
 
 .lunch-item-join-button{
@@ -105,6 +112,10 @@
   background-color: #dcd8cc;
 }
 
+.what-is-lt-wrapper{
+  width: 100%;
+}
+
 .lt-part {
     width: 28%;
     margin-right: 2%;
@@ -115,6 +126,7 @@
     margin-top: 3%;
     margin-bottom: 3%;
     padding: 10px 10px 25px 10px;
+    max-width: 220px;
 }
 
 h1.lt-basics, h2.lt-basics {

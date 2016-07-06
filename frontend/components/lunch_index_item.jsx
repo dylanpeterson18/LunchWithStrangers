@@ -43,7 +43,8 @@ const LunchIndexItem = React.createClass({
           <div className="lunch-item-top">
 
             <div className="lunch-item-date-time">
-              <div>
+              <div className="host-box">
+                host: {lunch.host.username}
               </div>
               <div className="lunch-item-day">
                 {day}

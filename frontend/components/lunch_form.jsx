@@ -70,7 +70,8 @@ const LunchForm = React.createClass({
                   dateFormat="MM-DD-YYYY"
                   onChange={this.dateChange}/>
                 </div>
-          <select className="select-time" onChange={this.timeChange}>
+          <select required className="select-time" onChange={this.timeChange}>
+            <option value="">Choose A Time</option>
             <option value="10:00 AM">10:00 AM</option>
             <option value="10:30 AM">10:30 AM</option>
             <option value="11:00 AM">11:00 AM</option>
