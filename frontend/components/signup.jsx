@@ -17,13 +17,13 @@ const SignUp = React.createClass({
     this.errorListener = ErrorStore.addListener(this.forceUpdate.bind(this));
   },
   getInitialState(){
-    return({username: "", password: "", city: ""})
+    return({username: "", password: "", city: ""});
   },
   passwordChange(e){
-    this.setState({password: e.currentTarget.value})
+    this.setState({password: e.currentTarget.value});
   },
   usernameChange(e){
-    this.setState({username: e.currentTarget.value})
+    this.setState({username: e.currentTarget.value});
   },
   handleSubmit(e) {
 		e.preventDefault();
@@ -55,7 +55,7 @@ const SignUp = React.createClass({
   },
   cityChange(e){
     console.log(e.currentTarget.value);
-    this.setState({city: e.currentTarget.value})
+    this.setState({city: e.currentTarget.value});
   },
   render(){
 

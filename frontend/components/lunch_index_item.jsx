@@ -34,8 +34,10 @@ const LunchIndexItem = React.createClass({
     let day = weekDays[date.getDay()];
     let month = months[date.getMonth()] + " " + date.getDate();
     let time = lunch.time;
-
-
+    let host = "no host!!";
+    if(lunch.host){
+      host = lunch.host.username;
+    }
     return(
 
       <div className="lunch-index-item">
@@ -44,7 +46,7 @@ const LunchIndexItem = React.createClass({
 
             <div className="lunch-item-date-time">
               <div className="host-box">
-                host: {lunch.host.username}
+                host:{host}
               </div>
               <div className="lunch-item-day">
                 {day}

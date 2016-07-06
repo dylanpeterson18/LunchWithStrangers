@@ -41,3 +41,30 @@ SherylSandberg = User.create!(username: "SherylSandberg", password: "SherylSandb
 MeganSmith = User.create!(username: "MeganSmith", password: "MeganSmith", city: "San Francisco")
 
 #Lunches
+LizLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+JackLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+JennaLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+JerryLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+CostanzaLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+ElaineLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+TaylorLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+JasonLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+ClooneyLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+KimLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+MichaelLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+JimLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+PamLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+PeterLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+LarryLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+SherylLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+MeganLunch = LunchEvent.create!(date_time: , place:  , host_id: , city_id:  , details: , time: )
+
+
+
+
+date_time: "07-21-2016",
+place: "jasonbourne",
+host_id: 44,
+city_id: 10,
+details: "bourne",
+time: "1:00 PM">

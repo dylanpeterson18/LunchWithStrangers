@@ -14,6 +14,7 @@ const Dashboard = React.createClass({
   },
 
   componentDidMount () {
+    console.log("mounted Dashboard");
     $.ajax({
       url: `/api/users/${SessionStore.currentUser().id}`,
       success: (res)=>{
@@ -23,7 +24,7 @@ const Dashboard = React.createClass({
     });
     this.lunchListener = LunchStore.addListener(this.getLunches);
     this.lunchListener2 = LunchStore.addListener(this.forceUpdate.bind(this));
-    console.log("mounted Dashboard");
+
     LunchActions.fetchLunches();
   },
 
@@ -39,12 +40,26 @@ const Dashboard = React.createClass({
     hashHistory.push('/cities');
   },
   render () {
-    const user = SessionStore.currentUser();
-    let joinedLunches = user.lunches;
-    let hostedLunches = user.hosted_lunches;
-    if(!this.state.lunches){
+
+
+
+
+    if(this.state.lunches.length === 0){
       return(<div>THERE ARE NO LUNCHES</div>);
     } else {
+
+      const user = SessionStore.currentUser();
+      let joined = [];
+      let hosted = [];
+      this.state.lunches.forEach((lunch) => {
+        if(lunch.host_id === user.id){
+          hosted.push(lunch);
+        } else if(LunchStore.isUserAttendee(user.id, lunch.id)){
+          joined.push(lunch);
+        }
+      });
+
+
       return (
       <div className="dashboard">
         <div className="welcome">
@@ -68,7 +83,7 @@ const Dashboard = React.createClass({
             <div className="lunches-index">
 
               {
-                hostedLunches.map((lunch) =>{
+                hosted.map((lunch) =>{
                   return (<LunchIndexItem key={lunch.id} lunch={lunch} />);
                 })
               }
@@ -78,7 +93,7 @@ const Dashboard = React.createClass({
           <h2 className="lt-basics">JOINED LUNCHES</h2>
           <div className="lunches-index">
               {
-                joinedLunches.map((lunch) =>{
+                joined.map((lunch) =>{
                   return (<LunchIndexItem key={lunch.id} lunch={lunch} />);
                 })
               }

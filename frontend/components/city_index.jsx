@@ -1,5 +1,8 @@
 const React = require('react');
 const Link = require('react-router').Link;
+const ReactRouter = require('react-router');
+const Router = ReactRouter.Router;
+const hashHistory = ReactRouter.hashHistory;
 
 const CityIndex = React.createClass({
   getInitialState: function () {

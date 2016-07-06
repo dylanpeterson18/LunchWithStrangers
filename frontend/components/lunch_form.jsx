@@ -17,8 +17,9 @@ const LunchForm = React.createClass({
     this.setState({details: e.currentTarget.value});
   },
   dateChange(dateString, { dateMoment, timestamp }){
-    this.setState({date_time: dateMoment});
+    this.setState({date_time: dateString});
     console.log(dateMoment);
+    console.log(dateString);
   },
   timeChange(e){
     this.setState({time: e.currentTarget.value});
