@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 60%;
 }
 
 .welcome {
@@ -27,10 +28,12 @@
 }
 
 .quotes {
-    padding: 20px;
-    margin: 0px;
-    padding-right: 40px;
-    padding-left: 40px;
+  font-family: Papyrus, fantasy;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: 17px 26px 0px 30px;
+  text-align: center;
+  font-size: 17px;
 }
 
 

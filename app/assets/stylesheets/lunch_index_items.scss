@@ -69,10 +69,19 @@
   height: 52px;
   background-color: #05bd48;
 }
+
+#joined-lunch-button:hover{
+  background-color: darkgreen;
+}
+
 #hosting-lunch-button{
   width: 70%;
   height: 52px;
   background-color: orange;
+}
+
+#hosting-lunch-button:hover{
+  cursor: auto;
 }
 
 #join-lunch-button:hover {

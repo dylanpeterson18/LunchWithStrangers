@@ -41,9 +41,9 @@ const LunchForm = React.createClass({
   render(){
     return(
     <div>
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="create-lunch-form">
 
-        <p>City:  {this.props.city.name}</p>
+        <h2 className="lt-basics">{this.props.city.name}</h2>
 
         <label for="lunch-where">Where: </label>
         <input type="text"
@@ -62,13 +62,14 @@ const LunchForm = React.createClass({
             placeholder="e.g. The reservation is under Dylan! We'll be
             in the back room."/>
 
+          <div className="datepicker">
             <DateField
                   placeholderText="Click to select a date"
                   minDate={moment()}
                   maxDate={moment().add(4, 'months')}
                   dateFormat="MM-DD-YYYY"
                   onChange={this.dateChange}/>
-
+                </div>
           <select className="select-time" onChange={this.timeChange}>
             <option value="10:00 AM">10:00 AM</option>
             <option value="10:30 AM">10:30 AM</option>

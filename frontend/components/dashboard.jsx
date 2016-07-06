@@ -58,10 +58,8 @@ const Dashboard = React.createClass({
             </button>
           </div>
           <div className="dashboard-description">
-            <p className="quotes">"Fear makes strangers of people who would be friends"
-              -Shirley MacLaine</p>
-            <p className="quotes">"There are no strangers here, only friends you haven't met"
-              -William Butler Yeats</p>
+            <p className="quotes">"There are no strangers here, only friends you haven't met"</p>
+            <p className="quotes">-William Butler Yeats</p>
           </div>
         </div>
         <div className="dashboard-lunch-index">
