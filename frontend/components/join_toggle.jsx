@@ -3,6 +3,7 @@ const SessionStore = require('../store/session_store');
 const ReactRouter = require('react-router');
 const hashHistory = ReactRouter.hashHistory;
 const LunchStore = require('../store/lunch_store');
+const LunchActions = require('../actions/lunch_actions');
 // && this.props.lunch.attendees.id.indexOf(SessionStore.currentUser().id) !== -1
 
 const JoinToggle = React.createClass({
@@ -14,6 +15,7 @@ const JoinToggle = React.createClass({
   },
   componentDidMount(){
     this.lsListener = LunchStore.addListener(this.determineButtonText);
+    this.determineButtonText();
   },
   componentWillUnmount(){
     this.lsListener.remove();
@@ -23,7 +25,7 @@ const JoinToggle = React.createClass({
     if(SessionStore.isUserLoggedIn()){
       const userId = SessionStore.currentUser().id;
       if(this.props.lunch.host_id === userId){
-        this.setState({joinState: "YOU'RE HOSTING THIS", joinId:"joined-lunch-button" });
+        this.setState({joinState: "YOU'RE HOSTING THIS", joinId:"hosting-lunch-button" });
       }
       else if(LunchStore.isUserAttendee(userId, this.props.lunch.id)){
         this.setState({joinState: "JOINED!", joinId: "joined-lunch-button"});
@@ -41,14 +43,14 @@ const JoinToggle = React.createClass({
     } else if(this.state.joinState === "JOINED!"){
       e.preventDefault();
       this.setState({joinState: "UNJOINING..."});
-
       $.ajax({
-      url: "/api/lunch_attendees/1000" ,
+      url: "/api/lunch_attendees" ,
       method: "DELETE",
       data: {lunch_attendees: {lunch_id: this.props.lunch.id,
       user_id: SessionStore.currentUser().id}},
       success: ()=> {
-        this.setState({joinState: "JOIN", joinId:"join-lunch-button"});
+        LunchActions.getLunch(this.props.lunch.id);
+        // this.setState({joinState: "JOIN", joinId:"join-lunch-button"}); dont need this because we have store listener
       }
     });
     } else if (this.state.joinState === "JOIN"){
@@ -62,7 +64,8 @@ const JoinToggle = React.createClass({
       data: {lunch_attendees: {lunch_id: this.props.lunch.id,
       user_id: SessionStore.currentUser().id}},
       success: ()=> {
-        this.setState({joinState: "JOINED!", joinId:"joined-lunch-button"});
+        LunchActions.getLunch(this.props.lunch.id);
+        // this.setState({joinState: "JOINED!", joinId:"joined-lunch-button"});dont need this because we have store listener
 
       }
     });

@@ -4,7 +4,7 @@ const LunchActions = require('../actions/lunch_actions');
 const CityShow = require('./city_show');
 const SessionStore = require('../store/session_store');
 
-// import { DateField, Calendar } from 'react-date-picker';
+import { DateField, Calendar } from 'react-date-picker';
 
 const LunchForm = React.createClass({
   getInitialState(){
@@ -62,7 +62,12 @@ const LunchForm = React.createClass({
             placeholder="e.g. The reservation is under Dylan! We'll be
             in the back room."/>
 
-
+            <DateField
+                  placeholderText="Click to select a date"
+                  minDate={moment()}
+                  maxDate={moment().add(4, 'months')}
+                  dateFormat="MM-DD-YYYY"
+                  onChange={this.dateChange}/>
 
           <select className="select-time" onChange={this.timeChange}>
             <option value="10:00 AM">10:00 AM</option>
@@ -88,12 +93,7 @@ const LunchForm = React.createClass({
   }
 
 });
-// <DateField
-//       placeholderText="Click to select a date"
-//       minDate={moment()}
-//       maxDate={moment().add(4, 'months')}
-//       dateFormat="MM-DD-YYYY"
-//       onChange={this.dateChange}/>
+
 
 
 module.exports = LunchForm;

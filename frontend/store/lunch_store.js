@@ -18,16 +18,16 @@ const setLunch = function (lunch) {
 };
 
 LunchStore.isUserAttendee = function(userId, lunchId){
-  debugger
+  let status = false;
     if(_lunches[lunchId] === undefined){
       return false;
     }
      _lunches[lunchId].attendees.forEach( (attendee) =>{
-       if(attendee.id === userId){
-         return true;
+       if(attendee.user_id === userId){
+         status = true;
        }
      });
-     return false;
+     return status;
 };
 
 LunchStore.all = function () {

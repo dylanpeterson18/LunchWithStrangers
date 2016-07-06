@@ -27,7 +27,7 @@ const months = {
 };
 
 const LunchIndexItem = React.createClass({
-  
+
   render(){
     let lunch = this.props.lunch;
     let date = new Date(lunch.date_time);
@@ -58,6 +58,9 @@ const LunchIndexItem = React.createClass({
           </div>
           <div className="lunch-item-place">
             {lunch.place}
+          </div>
+          <div className="lunch-item-place">
+            {lunch.details}
           </div>
         </div>
         <JoinToggle lunch={lunch}/>

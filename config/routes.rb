@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :cities, only: [:index, :show]
     resources :lunch_events, only: [:create, :index, :show]
-    resources :lunch_attendees, only: [:create, :destroy]
+    resource :lunch_attendees, only: [:create, :destroy]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

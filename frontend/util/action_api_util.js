@@ -1,10 +1,11 @@
 const ActionApiUtil = {
-  createLunch(formData){
+  createLunch(formData, cb){
     $.ajax({
       url: `api/lunch_events`,
       type: "POST",
       data: {lunch_events: formData},
-      success(city) {
+      success(lunch) {
+        cb(lunch);
       console.log("code worked- you're so smart and amazing!");
       },
       error(city){
@@ -26,7 +27,7 @@ const ActionApiUtil = {
 
   getLunch (id, cb) {
     $.ajax({
-      url: `api/lunch_event/${id}`,
+      url: `api/lunch_events/${id}`,
       success (lunch) {
         cb(lunch);
       }

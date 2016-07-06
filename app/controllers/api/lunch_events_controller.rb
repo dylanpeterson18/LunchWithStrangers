@@ -8,6 +8,12 @@ class Api::LunchEventsController < ApplicationController
     end
 	end
 
+  def show
+    @lunch = LunchEvent.find_by(id: params[:id])
+    render 'api/lunch_events/show'
+  end
+
+
   def index
     @lunches = LunchEvent.all
   end

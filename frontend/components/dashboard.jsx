@@ -5,6 +5,7 @@ const LunchIndexItem = require('./lunch_index_item.jsx');
 const SessionStore = require('../store/session_store');
 const ReactRouter = require('react-router');
 const hashHistory = ReactRouter.hashHistory;
+const SessionActions = require('../actions/session_actions');
 
 
 const Dashboard = React.createClass({
@@ -16,6 +17,7 @@ const Dashboard = React.createClass({
     $.ajax({
       url: `/api/users/${SessionStore.currentUser().id}`,
       success: (res)=>{
+        SessionActions.receiveUser(res);
         console.log(res);
       }
     });
