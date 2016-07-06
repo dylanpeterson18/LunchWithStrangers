@@ -7,10 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
+
 City.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('cities')
+
 LunchEvent.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('lunch_events')
+
+LunchAttendee.delete_all
 
 #Cities
 NY = City.create!(name: "New York City", image_url: "http://s3.amazonaws.com/tws-production-paperclip/cities/header_bgs/000/000/005/small/nyc2-correct.jpg?1409550576")

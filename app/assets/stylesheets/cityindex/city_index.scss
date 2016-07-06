@@ -60,6 +60,10 @@
   justify-content: center;
 }
 
+.city-name:hover{
+  opacity: 0.0;
+}
+
 /* line 46, /Users/floridakid411/Desktop/TWS/app/assets/stylesheets/cityindex/city_index.scss */
 .city-index::after {
   clear: both;
