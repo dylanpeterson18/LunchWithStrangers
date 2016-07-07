@@ -13,11 +13,9 @@ const CityShow = React.createClass({
     return { city: {}, modalOpen: false };
   },
   componentDidMount: function () {
-    console.log("component did mount yay!");
     $.get(`/api/cities/${this.props.params.id}`, function (city) {
       this.setState({city: city});
-    }.bind(this), console.log("ajax error from city show ComDidMount"));
-      console.log("state:" + this.state);
+    }.bind(this));
   },
   _handleClick(){
     if(SessionStore.isUserLoggedIn()){

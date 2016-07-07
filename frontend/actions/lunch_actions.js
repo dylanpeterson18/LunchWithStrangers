@@ -4,8 +4,6 @@ const LunchConstants = require('../constants/lunch_constants.js');
 
 module.exports = {
   fetchLunches () {
-    console.log("got to actions api util fetch lunches");
-
     ActionApiUtil.fetchLunches(this.receiveAll);
   },
 

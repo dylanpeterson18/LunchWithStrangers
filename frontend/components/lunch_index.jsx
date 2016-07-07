@@ -12,7 +12,6 @@ const LunchIndex = React.createClass({
   componentDidMount () {
     this.lunchListener = LunchStore.addListener(this.getLunches);
     this.lunchListener2 = LunchStore.addListener(this.forceUpdate.bind(this));
-    console.log("mounted Lunch Index");
     LunchActions.fetchLunches();
   },
 

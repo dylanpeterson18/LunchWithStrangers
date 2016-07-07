@@ -50,7 +50,6 @@ const JoinToggle = React.createClass({
       user_id: SessionStore.currentUser().id}},
       success: ()=> {
         LunchActions.getLunch(this.props.lunch.id);
-        // this.setState({joinState: "JOIN", joinId:"join-lunch-button"}); dont need this because we have store listener
       }
     });
     } else if (this.state.joinState === "JOIN"){
@@ -65,8 +64,6 @@ const JoinToggle = React.createClass({
       user_id: SessionStore.currentUser().id}},
       success: ()=> {
         LunchActions.getLunch(this.props.lunch.id);
-        // this.setState({joinState: "JOINED!", joinId:"joined-lunch-button"});dont need this because we have store listener
-
       }
     });
     }

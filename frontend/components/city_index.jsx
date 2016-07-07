@@ -26,7 +26,7 @@ const CityIndex = React.createClass({
 
     {this.state.cities.map( function(city) {
     return (
-      <div className="city">
+      <div className="city" key={city.id}>
         <div className="city-image" style={{backgroundImage: `url(${city.image_url})`}}>
 
             <h2 className="city-name">
@@ -41,11 +41,11 @@ const CityIndex = React.createClass({
       }, this)}
     </div>
     </div>
-    )
+  );
   },
 
 
 
-})
+});
 
 module.exports = CityIndex;

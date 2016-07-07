@@ -59,12 +59,10 @@ const SignUp = React.createClass({
           SessionActions.receiveUser(res);
         }
       });
-      console.log("signed up");
       hashHistory.push('/dashboard');
     }
   },
   cityChange(e){
-    console.log(e.currentTarget.value);
     this.setState({city: e.currentTarget.value});
   },
   render(){

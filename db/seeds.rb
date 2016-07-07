@@ -73,6 +73,11 @@ LarryLunch = LunchEvent.create!(date_time: "08-17-2016", place: "Larry Ellison" 
 SherylLunch = LunchEvent.create!(date_time: "07-26-2016", place:  "Sheryl", host_id: 16, city_id: 2, details: "Sheryl", time: "3:30 PM")
 MeganLunch = LunchEvent.create!(date_time: "09-09-2016", place:  "Megan", host_id: 17, city_id: 2, details:  "Megan", time: "1:00 PM")
 DylanLunch = LunchEvent.create!(date_time: "09-18-2016", place:  "Dylan's Apartment", host_id: 18, city_id: 2, details:  "I hope you like the site! Call me at (732) 272-7624 if you want to chat! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
+DylanLunch2 = LunchEvent.create!(date_time: "09-18-2016", place:  "Dylan's Apartment", host_id: 18, city_id: 1, details:  "I hope you like the site! Call me at (732) 272-7624 if you want to chat! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
+DylanLunch3 = LunchEvent.create!(date_time: "09-18-2016", place:  "Dylan's Apartment", host_id: 18, city_id: 3, details:  "I hope you like the site! Call me at (732) 272-7624 if you want to chat! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
+DylanLunch4 = LunchEvent.create!(date_time: "09-18-2016", place:  "Dylan's Apartment", host_id: 18, city_id: 4, details:  "I hope you like the site! Call me at (732) 272-7624 if you want to chat! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
+
+
 
 #lunch_attendees
 LizAttendee1 = LunchAttendee.create!(user_id: 1, lunch_id: 2)

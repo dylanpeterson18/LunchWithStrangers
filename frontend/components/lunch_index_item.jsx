@@ -42,7 +42,9 @@ const LunchIndexItem = React.createClass({
       if(host === "DylanPeterson"){
         dylanId= "dylan";
       }
-      pic = lunch.host.picture_url;
+      if(lunch.host.picture_url){
+        pic = lunch.host.picture_url;
+      }
     }
     return(
 

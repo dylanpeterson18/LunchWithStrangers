@@ -48,7 +48,6 @@ const Login = React.createClass({
   },
   redirectIfLoggedIn() {
     if (SessionStore.isUserLoggedIn()) {
-      console.log("logged in");
       hashHistory.push("/dashboard");
     }
   },

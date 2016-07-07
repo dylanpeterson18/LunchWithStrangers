@@ -15,12 +15,10 @@ const Dashboard = React.createClass({
   },
 
   componentDidMount () {
-    console.log("mounted Dashboard");
     $.ajax({
       url: `/api/users/${SessionStore.currentUser().id}`,
       success: (res)=>{
         SessionActions.receiveUser(res);
-        console.log(res);
       }
     });
     this.userListener = SessionStore.addListener(this.forceUpdate.bind(this));
@@ -34,6 +32,7 @@ const Dashboard = React.createClass({
   componentWillUnmount () {
     this.lunchListener.remove();
     this.lunchListener2.remove();
+    this.userListener = SessionStore.addListener(this.forceUpdate.bind(this));
   },
 
   getLunches () {
@@ -43,9 +42,6 @@ const Dashboard = React.createClass({
     hashHistory.push('/cities');
   },
   render () {
-
-
-
 
     if(this.state.lunches.length === 0){
       return(<div>THERE ARE NO LUNCHES</div>);
@@ -62,31 +58,32 @@ const Dashboard = React.createClass({
         } else if(LunchStore.isUserAttendee(user.id, lunch.id)){
           joined.push(lunch);
         }
-        if(hosted.length===0){
-          hostedButton =
-          <div className="dashboard-no-lunches">
-            <h3>You aren't hosting any lunches. Eat guilt free with friends.</h3>
-              <p className="quotes">"It is a scientific fact that your body will not absorb cholesterol if you take it from another person's plate."</p>
-              <p className="quotes">- Dave Barry</p>
-            <button id="host-own-lunch-button" className="commit" onClick={this._handleClick}>
-            Create a Lunch!
-          </button>
-        </div>;
-        }
-        if(joined.length==0){
-          joinedButton =
-          <div className="dashboard-no-lunches">
-            <h3>You haven't joined any lunches. How will everyone know how amazing you are?
-            Get out there and get a drink with someone.</h3>
-          <p className="quotes">"Wine is constant proof that God loves us and loves to see us happy."</p>
-          <p className="quotes">- Benjamin Franklin</p>
-            <button id="host-own-lunch-button" className="commit" onClick={this._handleClick}>
-            Join a Lunch!
-          </button>
-        </div>;
-        }
+
 
       });
+      if(hosted.length===0){
+        hostedButton =
+        <div className="dashboard-no-lunches">
+          <h3>You aren't hosting any lunches. Eat guilt free with friends.</h3>
+            <p className="quotes">"It is a scientific fact that your body will not absorb cholesterol if you take it from another person's plate."</p>
+            <p className="quotes">- Dave Barry</p>
+          <button id="host-own-lunch-button" className="commit" onClick={this._handleClick}>
+          Create a Lunch!
+        </button>
+      </div>;
+      }
+      if(joined.length===0){
+        joinedButton =
+        <div className="dashboard-no-lunches">
+          <h3>You haven't joined any lunches. How will everyone know how amazing you are?
+          Get out there and get a drink with someone.</h3>
+        <p className="quotes">"Wine is constant proof that God loves us and loves to see us happy."</p>
+        <p className="quotes">- Benjamin Franklin</p>
+          <button id="host-own-lunch-button" className="commit" onClick={this._handleClick}>
+          Join a Lunch!
+        </button>
+      </div>;
+      }
 
 
       return (
