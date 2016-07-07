@@ -6,4 +6,5 @@ json.host @lunch.host
 json.attendees @lunch.attendees do |attendee|
   json.extract! attendee, :user_id
   json.host_name attendee.user.username
+  json.picture_url attendee.user.picture_url
 end

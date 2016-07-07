@@ -15,6 +15,7 @@ LunchEvent.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('lunch_events')
 
 LunchAttendee.delete_all
+ActiveRecord::Base.connection.reset_pk_sequence!('lunch_attendees')
 
 #Cities
 NY = City.create!(name: "New York City", image_url: "http://s3.amazonaws.com/tws-production-paperclip/cities/header_bgs/000/000/005/small/nyc2-correct.jpg?1409550576")
@@ -25,30 +26,30 @@ LosAngeles = City.create!(name: "Los Angeles", image_url:  "http://s3.amazonaws.
 
 
 #Users- New York City
-LizLemon = User.create!(username: "LizLemon", password: "LizLemon", city: "New York City")
-JackDonaghy = User.create!(username: "JackDonaghy", password: "JackDonaghy", city: "New York City")
-JennaMaroney = User.create!(username: "JennaMaroney", password: "JennaMaroney", city: "New York City")
-JerrySeinfeld = User.create!(username: "JerrySeinfeld", password: "JerrySeinfeld", city: "New York City")
-GeorgeCostanza = User.create!(username: "GeorgeCostanza", password: "GeorgeCostanza", city: "New York City")
-ElaineBennett = User.create!(username: "ElaineBennett", password: "ElaineBennett", city: "New York City")
+LizLemon = User.create!(username: "LizLemon", password: "LizLemon", city: "New York City", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851483/Screen_Shot_2016-07-06_at_5.19.54_PM_btkodh.png")
+JackDonaghy = User.create!(username: "JackDonaghy", password: "JackDonaghy", city: "New York City", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851483/Screen_Shot_2016-07-06_at_5.20.29_PM_wuytij.png")
+JennaMaroney = User.create!(username: "JennaMaroney", password: "JennaMaroney", city: "New York City", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.21.34_PM_z7uyzm.png")
+JerrySeinfeld = User.create!(username: "JerrySeinfeld", password: "JerrySeinfeld", city: "New York City", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.21.55_PM_hthcyt.png")
+GeorgeCostanza = User.create!(username: "GeorgeCostanza", password: "GeorgeCostanza", city: "New York City", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.23.23_PM_asvhdl.png")
+ElaineBenes = User.create!(username: "ElaineBenes", password: "ElaineBenes", city: "New York City", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851483/Screen_Shot_2016-07-06_at_5.22.47_PM_dgp9ck.png")
 
 #Users- LA
-TaylorSwift = User.create!(username: "TaylorSwift", password: "TaylorSwift", city: "Los Angeles")
-JasonBourne = User.create!(username: "JasonBourne", password: "JasonBourne", city: "Los Angeles")
-GeorgeClooney = User.create!(username: "GeorgeClooney", password: "GeorgeClooney", city: "Los Angeles")
-KimKardashian = User.create!(username: "KimKardashian", password: "KimKardashian", city: "Los Angeles")
+TaylorSwift = User.create!(username: "TaylorSwift", password: "TaylorSwift", city: "Los Angeles", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.23.59_PM_psdzam.png")
+JasonBourne = User.create!(username: "JasonBourne", password: "JasonBourne", city: "Los Angeles", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.24.31_PM_rh6voa.png")
+GeorgeClooney = User.create!(username: "GeorgeClooney", password: "GeorgeClooney", city: "Los Angeles", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.24.56_PM_gyrf5h.png")
+KimKardashian = User.create!(username: "KimKardashian", password: "KimKardashian", city: "Los Angeles", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.25.52_PM_hy05ir.png")
 
 
 #Users - Boston
-MichaelScott = User.create!(username: "MichaelScott", password: "MichaelScott", city: "Boston")
-JimHalpert = User.create!(username: "JimHalpert", password: "JimHalpert", city: "Boston")
-PamBeesly = User.create!(username: "PamBeesly", password: "PamBeesly", city: "Boston")
+MichaelScott = User.create!(username: "MichaelScott", password: "MichaelScott", city: "Boston", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.26.40_PM_yy54hb.png")
+JimHalpert = User.create!(username: "JimHalpert", password: "JimHalpert", city: "Boston", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.27.02_PM_velwrt.png")
+PamBeesly = User.create!(username: "PamBeesly", password: "PamBeesly", city: "Boston", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.28.09_PM_hkk0km.png")
 
 #Users - SF
-PeterThiel = User.create!(username: "PeterThiel", password: "PeterThiel", city: "San Francisco")
-LarryEllison = User.create!(username: "LarryEllison", password: "LarryEllison", city: "San Francisco")
-SherylSandberg = User.create!(username: "SherylSandberg", password: "SherylSandberg", city: "San Francisco")
-MeganSmith = User.create!(username: "MeganSmith", password: "MeganSmith", city: "San Francisco")
+PeterThiel = User.create!(username: "PeterThiel", password: "PeterThiel", city: "San Francisco", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.29.10_PM_wvi0jh.png")
+LarryEllison = User.create!(username: "LarryEllison", password: "LarryEllison", city: "San Francisco", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.30.09_PM_n81b0e.png")
+SherylSandberg = User.create!(username: "SherylSandberg", password: "SherylSandberg", city: "San Francisco", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.30.39_PM_lkohtn.png")
+MeganSmith = User.create!(username: "MeganSmith", password: "MeganSmith", city: "San Francisco", picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.31.03_PM_p77llj.png")
 
 #Lunches
 LizLunch = LunchEvent.create!(date_time: "08-22-2016", place: "Hot Dog stand outside 30 Rock" , host_id: 1, city_id: 1 , details: "I'll bring enough Cheesy Blasters for everyone!", time: "11:30 AM")
@@ -68,6 +69,42 @@ PeterLunch = LunchEvent.create!(date_time: "09-26-2016", place: "Peter Thiel" , 
 LarryLunch = LunchEvent.create!(date_time: "08-17-2016", place: "Larry Ellison" , host_id: 15, city_id: 2, details: "Larry Ellison", time: "2:00 PM")
 SherylLunch = LunchEvent.create!(date_time: "07-26-2016", place:  "Sheryl", host_id: 16, city_id: 2, details: "Sheryl", time: "3:30 PM")
 MeganLunch = LunchEvent.create!(date_time: "09-09-2016", place:  "Megan", host_id: 17, city_id: 2, details:  "Megan", time: "1:00 PM")
+
+#lunch_attendees
+LizAttendee1 = LunchAttendee.create!(user_id: 1, lunch_id: 2)
+LizAttendee2 = LunchAttendee.create!(user_id: 1, lunch_id: 3)
+JackAttendee1 = LunchAttendee.create!(user_id: 2, lunch_id: 1)
+JackAttendee2 = LunchAttendee.create!(user_id: 2, lunch_id: 3)
+JennaAttendee1 = LunchAttendee.create!(user_id: 3, lunch_id: 1)
+JennaAttendee2 = LunchAttendee.create!(user_id: 3, lunch_id: 2)
+JerryAttendee1 = LunchAttendee.create!(user_id: 4, lunch_id: 5)
+JerryAttendee2 = LunchAttendee.create!(user_id: 4, lunch_id: 6)
+CostanzaAttendee1 = LunchAttendee.create!(user_id: 5, lunch_id: 4)
+CostanzaAttendee2 = LunchAttendee.create!(user_id: 5, lunch_id: 6)
+ElaineAttendee1 = LunchAttendee.create!(user_id: 6, lunch_id: 5)
+ElaineAttendee2 = LunchAttendee.create!(user_id: 6, lunch_id: 4)
+TaylorAttendee1 = LunchAttendee.create!(user_id: 7, lunch_id: 10)
+TaylorAttendee2 = LunchAttendee.create!(user_id: 7, lunch_id: 9)
+JasonAttendee1 = LunchAttendee.create!(user_id: 8, lunch_id: 9)
+JasonAttendee2 = LunchAttendee.create!(user_id: 8, lunch_id: 7)
+ClooneyAttendee1 = LunchAttendee.create!(user_id: 9, lunch_id: 7)
+ClooneyAttendee2 = LunchAttendee.create!(user_id: 9, lunch_id: 10)
+KimAttendee1 = LunchAttendee.create!(user_id: 10, lunch_id: 7)
+KimAttendee2 = LunchAttendee.create!(user_id: 10, lunch_id: 9)
+MichaelAttendee1 = LunchAttendee.create!(user_id: 11, lunch_id: 12)
+MichaelAttendee2 = LunchAttendee.create!(user_id: 11, lunch_id: 13)
+JimAttendee1 = LunchAttendee.create!(user_id: 12, lunch_id: 11)
+JimAttendee2 = LunchAttendee.create!(user_id: 12, lunch_id: 13)
+PamAttendee1 = LunchAttendee.create!(user_id: 13, lunch_id: 11)
+PamAttendee2 = LunchAttendee.create!(user_id: 13, lunch_id: 12)
+PeterAttendee1 = LunchAttendee.create!(user_id: 14, lunch_id: 15)
+PeterAttendee2 = LunchAttendee.create!(user_id: 14, lunch_id: 16)
+LarryAttendee1 = LunchAttendee.create!(user_id: 15, lunch_id: 14)
+LarryAttendee2 = LunchAttendee.create!(user_id: 15, lunch_id: 16)
+SherylAttendee1 = LunchAttendee.create!(user_id: 16, lunch_id: 17)
+SherylAttendee2 = LunchAttendee.create!(user_id: 16, lunch_id: 14)
+MeganAttendee1 = LunchAttendee.create!(user_id: 17, lunch_id: 16)
+MeganAttendee2 = LunchAttendee.create!(user_id: 17, lunch_id: 14)
 
 
 

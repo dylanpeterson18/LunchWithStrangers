@@ -35,8 +35,10 @@ const LunchIndexItem = React.createClass({
     let month = months[date.getMonth()] + " " + date.getDate();
     let time = lunch.time;
     let host = "no host!!";
+    let pic= "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851907/Screen_Shot_2016-07-06_at_5.38.16_PM_q6lgsv.png";
     if(lunch.host){
       host = lunch.host.username;
+      pic = lunch.host.picture_url;
     }
     return(
 
@@ -45,9 +47,7 @@ const LunchIndexItem = React.createClass({
           <div className="lunch-item-top">
 
             <div className="lunch-item-date-time">
-              <div className="host-box">
-                {host}
-              </div>
+
               <div className="lunch-item-day">
                 {day}
               </div>
@@ -58,6 +58,17 @@ const LunchIndexItem = React.createClass({
                 {time}
               </div>
             </div>
+
+            <div className="profile-container">
+              <div className="profile-pic">
+                <img className="profile-pic-img" src={pic}></img>
+              </div>
+              <div className="host-box">
+                {host}
+              </div>
+            </div>
+
+
           </div>
           <div className="lunch-item-place">
             {lunch.place}
