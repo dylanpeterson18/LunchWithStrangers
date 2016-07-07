@@ -51,6 +51,7 @@ const SignUp = React.createClass({
   redirectIfSignedUp() {
     if (SessionStore.isUserLoggedIn()) {
       console.log("signed up");
+      hashHistory.push('/dashboard');
     }
   },
   cityChange(e){
@@ -77,7 +78,7 @@ const SignUp = React.createClass({
     		            value={this.state.password}
     		            onChange={this.passwordChange}
     								className="login-input"
-                    placeholder="Password (at least 6 characters you won't forget!)"/>
+                    placeholder="Password (at least 6 characters!)"/>
 
                     { this.fieldErrors("base") }
                     { this.fieldErrors("password") }
@@ -85,22 +86,22 @@ const SignUp = React.createClass({
 
 
             <div className="form-select-list">
-              <select className="form-control" id="sel1" onChange={this.cityChange}>
-                <option hidden>Select a city</option>
-                <option>Boston</option>
-                <option>Los Angeles</option>
-                <option>New York</option>
-                <option>San Francisco</option>
+              <select required className="form-control" id="sel1" onChange={this.cityChange}>
+                <option value="">Select a city</option>
+                <option value="Boston">Boston</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="New York">New York</option>
+                <option value="San Francisco">San Francisco</option>
               </select>
             </div>
             <input type="submit" value="Let's Get Lunch" className="commit" />
           </div>
       </form>
     </div>
-    )
+  );
 
   }
 
-})
+});
 
 module.exports = SignUp;

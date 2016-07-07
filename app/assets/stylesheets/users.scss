@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .profile-pic{
   width: 80%;
-  height: 60%;
+  height: 80%;
 }
 
 .profile-pic-img{
@@ -17,10 +17,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 61%;
-}
-
-.lunch-item-top {
-    display: flex;
-    flex-wrap: wrap;
+    width: 50%;
 }

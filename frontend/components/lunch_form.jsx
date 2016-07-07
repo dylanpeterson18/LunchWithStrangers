@@ -43,7 +43,7 @@ const LunchForm = React.createClass({
     return(
     <div>
       <form onSubmit={this.handleSubmit} className="create-lunch-form">
-
+        <div className="lunch-form-container">
         <h2 className="lt-basics">{this.props.city.name}</h2>
 
         <label for="lunch-where">Where: </label>
@@ -90,6 +90,7 @@ const LunchForm = React.createClass({
           </select>
 
         <input type="submit" value="Create Your Lunch" className="commit" />
+        </div>
       </form>
     </div>
   );

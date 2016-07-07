@@ -6,10 +6,17 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 
 .select-time{
     width: 125px;
     margin: 11px 0px;
     font-size: 26px;
+}
+
+
+.lunch-form-container{
+  max-width: 475px;
+  width: 100%;
 }
