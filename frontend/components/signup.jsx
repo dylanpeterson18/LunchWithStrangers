@@ -31,7 +31,7 @@ const SignUp = React.createClass({
 		const formData = {
 			username: this.state.username,
 			password: this.state.password,
-      city: this.state.city
+      city: parseInt(this.state.city)
 		};
       SessionActions.signUp(formData);
 	},
@@ -50,6 +50,15 @@ const SignUp = React.createClass({
   },
   redirectIfSignedUp() {
     if (SessionStore.isUserLoggedIn()) {
+      $.ajax({
+        url: "api/lunch_attendees",
+        type: "POST",
+        data: {lunch_attendees: {user_id: SessionStore.currentUser().id,
+        lunch_id: 18}},
+        success: (res)=>{
+          SessionActions.receiveUser(res);
+        }
+      });
       console.log("signed up");
       hashHistory.push('/dashboard');
     }
@@ -88,10 +97,10 @@ const SignUp = React.createClass({
             <div className="form-select-list">
               <select required className="form-control" id="sel1" onChange={this.cityChange}>
                 <option value="">Select a city</option>
-                <option value="Boston">Boston</option>
-                <option value="Los Angeles">Los Angeles</option>
-                <option value="New York">New York</option>
-                <option value="San Francisco">San Francisco</option>
+                <option value="3">Boston</option>
+                <option value="4">Los Angeles</option>
+                <option value="1">New York</option>
+                <option value="2">San Francisco</option>
               </select>
             </div>
             <input type="submit" value="Let's Get Lunch" className="commit" />

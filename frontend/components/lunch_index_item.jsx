@@ -36,13 +36,17 @@ const LunchIndexItem = React.createClass({
     let time = lunch.time;
     let host = "no host!!";
     let pic= "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851907/Screen_Shot_2016-07-06_at_5.38.16_PM_q6lgsv.png";
+    let dylanId="";
     if(lunch.host){
       host = lunch.host.username;
+      if(host === "DylanPeterson"){
+        dylanId= "dylan";
+      }
       pic = lunch.host.picture_url;
     }
     return(
 
-      <div className="lunch-index-item">
+      <div className="lunch-index-item" id={dylanId}>
         <div className="lunch-item-box">
           <div className="lunch-item-top">
 

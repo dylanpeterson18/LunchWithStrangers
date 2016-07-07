@@ -8,6 +8,7 @@ const hashHistory = ReactRouter.hashHistory;
 const SessionActions = require('../actions/session_actions');
 
 
+
 const Dashboard = React.createClass({
   getInitialState () {
     return { lunches: [] };
@@ -22,6 +23,8 @@ const Dashboard = React.createClass({
         console.log(res);
       }
     });
+    this.userListener = SessionStore.addListener(this.forceUpdate.bind(this));
+
     this.lunchListener = LunchStore.addListener(this.getLunches);
     this.lunchListener2 = LunchStore.addListener(this.forceUpdate.bind(this));
 
@@ -51,12 +54,38 @@ const Dashboard = React.createClass({
       const user = SessionStore.currentUser();
       let joined = [];
       let hosted = [];
+      let hostedButton = "";
+      let joinedButton = "";
       this.state.lunches.forEach((lunch) => {
         if(lunch.host_id === user.id){
           hosted.push(lunch);
         } else if(LunchStore.isUserAttendee(user.id, lunch.id)){
           joined.push(lunch);
         }
+        if(hosted.length===0){
+          hostedButton =
+          <div className="dashboard-no-lunches">
+            <h3>You aren't hosting any lunches. Eat guilt free with friends.</h3>
+              <p className="quotes">"It is a scientific fact that your body will not absorb cholesterol if you take it from another person's plate."</p>
+              <p className="quotes">- Dave Barry</p>
+            <button id="host-own-lunch-button" className="commit" onClick={this._handleClick}>
+            Create a Lunch!
+          </button>
+        </div>;
+        }
+        if(joined.length==0){
+          joinedButton =
+          <div className="dashboard-no-lunches">
+            <h3>You haven't joined any lunches. How will everyone know how amazing you are?
+            Get out there and get a drink with someone.</h3>
+          <p className="quotes">"Wine is constant proof that God loves us and loves to see us happy."</p>
+          <p className="quotes">- Benjamin Franklin</p>
+            <button id="host-own-lunch-button" className="commit" onClick={this._handleClick}>
+            Join a Lunch!
+          </button>
+        </div>;
+        }
+
       });
 
 
@@ -86,7 +115,9 @@ const Dashboard = React.createClass({
                 hosted.map((lunch) =>{
                   return (<LunchIndexItem key={lunch.id} lunch={lunch} />);
                 })
+
               }
+              {hostedButton}
             </div>
           </div>
         <div className="lunches-cont">
@@ -97,6 +128,7 @@ const Dashboard = React.createClass({
                   return (<LunchIndexItem key={lunch.id} lunch={lunch} />);
                 })
               }
+              {joinedButton}
           </div>
         </div>
       </div>

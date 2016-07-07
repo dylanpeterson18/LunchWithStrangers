@@ -9,11 +9,9 @@ const CityIndex = React.createClass({
     return { cities: [] };
   },
   componentDidMount: function () {
-    console.log("component did mount yay!")
     $.get("/api/cities", function (cities) {
       this.setState({cities: cities});
-    }.bind(this), console.log("ajax error from city index ComDidMount"))
-      console.log("state:" + this.state);
+    }.bind(this));
   },
   render(){
     const backgroundImage = "background-image";
