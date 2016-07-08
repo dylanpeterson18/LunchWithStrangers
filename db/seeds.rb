@@ -116,6 +116,25 @@ MeganAttendee1 = LunchAttendee.create!(user_id: 17, lunch_id: 16)
 MeganAttendee2 = LunchAttendee.create!(user_id: 17, lunch_id: 14)
 
 
+#My lunch shows up on everyones page
+LunchAttendee.create!(user_id: 1, lunch_id: 18)
+LunchAttendee.create!(user_id: 2, lunch_id: 18)
+LunchAttendee.create!(user_id: 3, lunch_id: 18)
+LunchAttendee.create!(user_id: 4, lunch_id: 18)
+LunchAttendee.create!(user_id: 5, lunch_id: 18)
+LunchAttendee.create!(user_id: 6, lunch_id: 18)
+LunchAttendee.create!(user_id: 7, lunch_id: 18)
+LunchAttendee.create!(user_id: 8, lunch_id: 18)
+LunchAttendee.create!(user_id: 9, lunch_id: 18)
+LunchAttendee.create!(user_id: 10, lunch_id: 18)
+LunchAttendee.create!(user_id: 11, lunch_id: 18)
+LunchAttendee.create!(user_id: 12, lunch_id: 18)
+LunchAttendee.create!(user_id: 13, lunch_id: 18)
+LunchAttendee.create!(user_id: 14, lunch_id: 18)
+LunchAttendee.create!(user_id: 15, lunch_id: 18)
+LunchAttendee.create!(user_id: 16, lunch_id: 18)
+LunchAttendee.create!(user_id: 17, lunch_id: 18)
+
 
 # 1 NY
 # 2 SF

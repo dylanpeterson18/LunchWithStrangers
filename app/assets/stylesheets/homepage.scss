@@ -46,3 +46,25 @@
   letter-spacing: normal;
   text-transform: none;
 }
+
+.homepage-part{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.image-container{
+  width: 24%;
+}
+
+.hp-img{
+  width: 100%;
+  max-width: 220px;
+}
+
+.basics-container {
+    width: 32%;
+}

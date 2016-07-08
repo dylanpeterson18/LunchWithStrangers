@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: auto;
 }
 
 .lunches-index {
@@ -42,6 +41,8 @@
     margin-bottom: 90px;
     padding-bottom: 30px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .control-panel{
