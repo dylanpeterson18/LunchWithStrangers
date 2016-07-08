@@ -15,10 +15,13 @@ LunchWithStrangers is a full-stack web application inspired by [TeaWithStrangers
 Cities are stored in a database with columns for `image_url` and `name`. When a user clicks on the Cities tab, an API call is made to the cities table and renders each city and its image:
 
 #CITIES INDEX pagePICTURE
+![Cities Index](docs/wireframes/city_index.png)
+
 
 When a user clicks on an individual city, an API call is made to the Lunches Table and renders each lunch that has a foreign key pointing to that city.
 
 #CITY SHOW PAGEPICTURE
+![City Show](docs/wireframes/city_show.png)
 
 Users have a column for `city_id` so that in the future, each individual city page will show the hosts in that city.
 
@@ -49,17 +52,26 @@ render () {
 
 A joins table connects Lunches with Users so that a user's lunches can appear in the Dashboard.
 
+![Lunch Index](docs/wireframes/lunch_index.png)
+
+This is an individual `LunchIndexItem`. When you click "Join", the button toggles, indicating that the request was successful.
+
+![Join Lunch](docs/wireframes/join.png)
+![Joined Lunch](docs/wireframes/unjoin.png)
+
 
 ### Dashboard
 
 The Dashboard consists of the `LunchIndex` and `LunchIndexItem` components. The dashboard uses the association between the `current_user` and `lunch_events` to grab their `hostedLunches` and `joinedLunches`.
 
-####Dashboard header
-![Dashboard screenshot](dashboard-header.png)
-####Dashboard Hosted Lunches
+Dashboard header
+![Dashboard header](docs/wireframes/dashboard_header.png)
 
-####Dashboard Joined Lunches
+Dashboard - Hosted Lunches
+![Dashboard Hosted Lunches](docs/wireframes/hosted_lunches.png)
 
+Dashboard - Joined Lunches
+![Dashboard Joined Lunches](docs/wireframes/joined_lunches.png)
 
 
 ## Future Directions for the Project
