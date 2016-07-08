@@ -5,7 +5,7 @@
 [heroku]: https://lunchwithcreepers.herokuapp.com
 [TeaWithStrangers]: https://teawithstrangers.com
 
-LunchWithStrangers is a full-stack web application inspired by [TeaWithStrangers][TWS]. The backend is Ruby on Rails, the database is Postgres SQL, and the frontend is in React.js with a Flux framework.
+LunchWithStrangers is a full-stack web application inspired by [TeaWithStrangers][TeaWithStangers]. The backend is Ruby on Rails, the database is Postgres SQL, and the frontend is in React.js with a Flux framework.
 
 
 ## Features and Implementation
