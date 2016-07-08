@@ -85,7 +85,7 @@ const Login = React.createClass({
            { this.fieldErrors("password") }
            { this.fieldErrors("username") }
 
-          <input type="submit" value="Let's Get Lunch" className="commit" />
+          <input type="submit" value="Sign In" className="commit" />
 
 
         </form>
