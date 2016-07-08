@@ -53,7 +53,7 @@ const Homepage = React.createClass({
             <div className="basics-container">
               <h2 className="lt-basics">It's weird.</h2>
                   <p className="lt-basics-text">
-                  Everyone at tea time is stepping a little out of their comfort
+                  Everyone at Lunch time is stepping a little out of their comfort
                   zone. This makes it so much easier to actually learn something
                   unexpected about the people around you. Because open minds are
                   a prerequisite around here.</p>
@@ -85,7 +85,7 @@ const Homepage = React.createClass({
                 <p className="lt-basics-text">
                 And your eyes are made…for eye contact! Real
                 humans are so much cooler than their tweets or
-                Instagram pictures. Tea time has real humans! #nofilter!</p>
+                Instagram pictures. Lunch time has real humans! #nofilter!</p>
             </div>
           </div>
 
