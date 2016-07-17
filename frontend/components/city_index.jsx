@@ -28,13 +28,12 @@ const CityIndex = React.createClass({
     return (
       <div className="city" key={city.id}>
         <div className="city-image" style={{backgroundImage: `url(${city.image_url})`}}>
-
+          <div className="black">
             <h2 className="city-name">
               <Link className="background-filter" to={`cities/${city.id}`}></Link>
               <Link className="city-name" to={`cities/${city.id}`}>{city.name}</Link>
             </h2>
-
-
+          </div>
         </div>
       </div>
       );
