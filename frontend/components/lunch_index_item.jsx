@@ -76,11 +76,12 @@ const LunchIndexItem = React.createClass({
 
 
           </div>
+
           <div className="lunch-item-place">
-            {lunch.place}
+            Place: <div id="lunch-item-place"> {lunch.place}</div>
           </div>
           <div className="lunch-item-place">
-            {lunch.details}
+            Details: <div id="lunch-item-place"> {lunch.details}</div>
           </div>
         </div>
         <JoinToggle lunch={lunch}/>

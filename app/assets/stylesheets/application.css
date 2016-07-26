@@ -33,8 +33,7 @@
 .footer-stuff{
   background-color: darkblue;
   color: white;
-  /* position: absolute; */
-  /* bottom: 0px; */
+
   font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
   line-height: 1.625;
   -webkit-font-smoothing: antialiased;
@@ -86,8 +85,16 @@ body {
 #signup-link{
     background-color: white;
     color: darkblue;
-    border: white;
+    border: 2px solid white;
     border-radius: 4px;
+    transition: all .5s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 15px;
 }
 
 .header-stuff li{
@@ -116,6 +123,34 @@ body {
   cursor: pointer;
   margin-right: 20px;
   font-size: 15px;
+  position: relative;
+}
+
+/*.link:hover{
+  border-bottom: 3px solid white;
+    width: 100px;
+}*/
+
+.link:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+  -webkit-transition: width .5s ease, background-color .5s ease;
+  -moz-transition: width .5s ease, background-color .5s ease;
+
+  /* position the content to the right bottom corner of the parent element to make it slide from right to left on hover */
+  position:absolute;
+  left:0;
+  bottom:0;
+}
+
+
+.link:hover:after {
+  width: 100%;
+  background: white;
 }
 
 .city-container{

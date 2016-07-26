@@ -27,16 +27,16 @@ LosAngeles = City.create!(name: "Los Angeles", image_url:  "http://s3.amazonaws.
 
 #Users- New York City
 LizLemon = User.create!(username: "LizLemon", password: "LizLemon", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851483/Screen_Shot_2016-07-06_at_5.19.54_PM_btkodh.png")
-JackDonaghy = User.create!(username: "JackDonaghy", password: "JackDonaghy", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851483/Screen_Shot_2016-07-06_at_5.20.29_PM_wuytij.png")
-JennaMaroney = User.create!(username: "JennaMaroney", password: "JennaMaroney", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.21.34_PM_z7uyzm.png")
-JerrySeinfeld = User.create!(username: "JerrySeinfeld", password: "JerrySeinfeld", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.21.55_PM_hthcyt.png")
+JackDonaghy = User.create!(username: "JackDonaghy", password: "JackDonaghy", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1469556872/Screen_Shot_2016-07-06_at_5.20.29_PM_wuytij.png")
+JennaMaroney = User.create!(username: "JennaMaroney", password: "JennaMaroney", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1469556994/Screen_Shot_2016-07-06_at_5.21.34_PM_z7uyzm.png")
+JerrySeinfeld = User.create!(username: "JerrySeinfeld", password: "JerrySeinfeld", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1469556963/Screen_Shot_2016-07-06_at_5.21.55_PM_hthcyt.png")
 GeorgeCostanza = User.create!(username: "GeorgeCostanza", password: "GeorgeCostanza", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.23.23_PM_asvhdl.png")
 ElaineBenes = User.create!(username: "ElaineBenes", password: "ElaineBenes", city_id: 1, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851483/Screen_Shot_2016-07-06_at_5.22.47_PM_dgp9ck.png")
 
 #Users- LA
 TaylorSwift = User.create!(username: "TaylorSwift", password: "TaylorSwift", city_id: 4, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.23.59_PM_psdzam.png")
-JasonBourne = User.create!(username: "JasonBourne", password: "JasonBourne", city_id: 4, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.24.31_PM_rh6voa.png")
-GeorgeClooney = User.create!(username: "GeorgeClooney", password: "GeorgeClooney", city_id: 4, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.24.56_PM_gyrf5h.png")
+JasonBourne = User.create!(username: "JasonBourne", password: "JasonBourne", city_id: 4, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1469557068/Screen_Shot_2016-07-06_at_5.24.31_PM_rh6voa.png")
+GeorgeClooney = User.create!(username: "GeorgeClooney", password: "GeorgeClooney", city_id: 4, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1469557036/Screen_Shot_2016-07-06_at_5.24.56_PM_gyrf5h.png")
 KimKardashian = User.create!(username: "KimKardashian", password: "KimKardashian", city_id: 4, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851482/Screen_Shot_2016-07-06_at_5.25.52_PM_hy05ir.png")
 
 
@@ -46,11 +46,11 @@ JimHalpert = User.create!(username: "JimHalpert", password: "JimHalpert", city_i
 PamBeesly = User.create!(username: "PamBeesly", password: "PamBeesly", city_id: 3, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.28.09_PM_hkk0km.png")
 
 #Users - SF
-PeterThiel = User.create!(username: "PeterThiel", password: "PeterThiel", city_id: 2, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.29.10_PM_wvi0jh.png")
-LarryEllison = User.create!(username: "LarryEllison", password: "LarryEllison", city_id: 2, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.30.09_PM_n81b0e.png")
+PeterThiel = User.create!(username: "PeterThiel", password: "PeterThiel", city_id: 2, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1469557104/Screen_Shot_2016-07-06_at_5.29.10_PM_wvi0jh.png")
+LarryEllison = User.create!(username: "LarryEllison", password: "LarryEllison", city_id: 2, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1469557371/Screen_Shot_2016-07-06_at_5.30.09_PM_n81b0e.png")
 SherylSandberg = User.create!(username: "SherylSandberg", password: "SherylSandberg", city_id: 2, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.30.39_PM_lkohtn.png")
 MeganSmith = User.create!(username: "MeganSmith", password: "MeganSmith", city_id: 2, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467851481/Screen_Shot_2016-07-06_at_5.31.03_PM_p77llj.png")
-DylanPeterson = User.create!(username: "DylanPeterson", password: "DylanPeterson", city_id: 2, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1467925912/Screen_Shot_2016-07-07_at_2.10.51_PM_zctlsk.png")
+DylanPeterson = User.create!(username: "DylanPeterson", password: "DylanPeterson", city_id: 2, picture_url: "http://res.cloudinary.com/dbewxxs0f/image/upload/v1469557577/Screen_Shot_2016-07-07_at_2.10.51_PM_zctlsk.png")
 
 
 
@@ -72,10 +72,10 @@ PeterLunch = LunchEvent.create!(date_time: "09-26-2016", place: "Gary Danko" , h
 LarryLunch = LunchEvent.create!(date_time: "08-17-2016", place: "My Yacht" , host_id: 15, city_id: 2, details: "It`ll be parked in front of Marina Greens", time: "2:00 PM")
 SherylLunch = LunchEvent.create!(date_time: "07-26-2016", place:  "Facebook HQ", host_id: 16, city_id: 2, details: "Come check out our company food!", time: "3:30 PM")
 MeganLunch = LunchEvent.create!(date_time: "09-09-2016", place:  "In N Out in North Beach", host_id: 17, city_id: 2, details:  "Keepin' it real", time: "1:00 PM")
-DylanLunch = LunchEvent.create!(date_time: "09-18-2016", place:  "Dylan's Apartment", host_id: 18, city_id: 2, details:  "I hope you like the site! Call me at (732) 272-7624 if you want to chat! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
-DylanLunch2 = LunchEvent.create!(date_time: "09-18-2016", place:  "Dylan's Apartment", host_id: 18, city_id: 1, details:  "I hope you like the site! Call me at (732) 272-7624 if you want to chat! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
-DylanLunch3 = LunchEvent.create!(date_time: "09-18-2016", place:  "Dylan's Apartment", host_id: 18, city_id: 3, details:  "I hope you like the site! Call me at (732) 272-7624 if you want to chat! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
-DylanLunch4 = LunchEvent.create!(date_time: "09-18-2016", place:  "Dylan's Apartment", host_id: 18, city_id: 4, details:  "I hope you like the site! Call me at (732) 272-7624 if you want to chat! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
+DylanLunch = LunchEvent.create!(date_time: "09-18-2016", place:  "This is my site!", host_id: 18, city_id: 2, details:  "Hey guys! This is my site! I hope you like it! Call me at (732) 272-7624 for job opportunities! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
+DylanLunch2 = LunchEvent.create!(date_time: "09-18-2016", place:  "This is my site!", host_id: 18, city_id: 1, details:  "Hey guys! This is my site! I hope you like it! Call me at (732) 272-7624 for job opportunities! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
+DylanLunch3 = LunchEvent.create!(date_time: "09-18-2016", place:  "This is my site!", host_id: 18, city_id: 3, details:  "Hey guys! This is my site! I hope you like it! Call me at (732) 272-7624 for job opportunities! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
+DylanLunch4 = LunchEvent.create!(date_time: "09-18-2016", place:  "This is my site!", host_id: 18, city_id: 4, details:  "Hey guys! This is my site! I hope you like it! Call me at (732) 272-7624 for job opportunities! Email: DylanPeterson18@gmail.com", time: "1:00 PM")
 
 
 

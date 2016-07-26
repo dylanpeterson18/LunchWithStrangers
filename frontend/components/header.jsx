@@ -33,7 +33,7 @@ const Header = React.createClass({
         <div className="allthelinks">
             <Link className="link" to="/cities">Cities</Link>
             <Link className="link" to="/login">Login</Link>
-            <Link className="link" id="signup-link" to="/signup">Sign Up</Link>
+            <Link  id="signup-link" to="/signup">Sign Up</Link>
         </div>
       );}
   },

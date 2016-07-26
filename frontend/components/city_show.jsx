@@ -42,7 +42,7 @@ const CityShow = React.createClass({
       <div className="one-city">
         <div className="one-city-image" style={{backgroundImage: `url(${this.state.city.image_url})`}}>
           <div className="one-city-color">
-            <h2 className="one-city-name">{this.state.city.name}</h2>
+            <h2 className="jello one-city-name">{this.state.city.name}</h2>
             <p>LET'S GET LUNCH</p>
           </div>
         </div>
@@ -53,26 +53,7 @@ const CityShow = React.createClass({
           </button>
         </div>
 
-        <div className="what-is-lt-wrapper wow pulse">
-          <div className="what-is-lt-container">
-            <div className="lt-part">
-              <h2 className="lt-basics">Show Up</h2>
-              <p className="lt-basics-text">You and a few others
-              join a host at lunch spot.</p>
-            </div>
-            <div className="lt-part">
-            <h2 className="lt-basics">Be Present</h2>
-              <p className="lt-basics-text">Engage. Be yourself. Meet
-              cool people. </p>
-            </div>
-            <div className="lt-part">
-            <h2 className="lt-basics">See What Happens</h2>
-              <p className="lt-basics-text">
-              Make lifelong friends. Or have one enjoyable lunch.
-              No strings attached.</p>
-            </div>
-          </div>
-        </div>
+
 
         <div className="join-for-lunch-wrapper wow rubberBand">
           <div className="join-for-lunch-container">
