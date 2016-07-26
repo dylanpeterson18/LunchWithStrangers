@@ -48,7 +48,7 @@ const LunchIndexItem = React.createClass({
     }
     return(
 
-      <div className="lunch-index-item" id={dylanId}>
+      <div className="lunch-index-item wow fadeInUp" id={dylanId}>
         <div className="lunch-item-box">
           <div className="lunch-item-top">
 

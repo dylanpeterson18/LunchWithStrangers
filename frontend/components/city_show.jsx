@@ -53,7 +53,7 @@ const CityShow = React.createClass({
           </button>
         </div>
 
-        <div className="what-is-lt-wrapper">
+        <div className="what-is-lt-wrapper wow pulse">
           <div className="what-is-lt-container">
             <div className="lt-part">
               <h2 className="lt-basics">Show Up</h2>
@@ -74,7 +74,7 @@ const CityShow = React.createClass({
           </div>
         </div>
 
-        <div className="join-for-lunch-wrapper">
+        <div className="join-for-lunch-wrapper wow rubberBand">
           <div className="join-for-lunch-container">
             <h2 className="lt-basics">Join for lunch time in the next few months!</h2>
             <p className="lt-basics-text">

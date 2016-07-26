@@ -17,7 +17,7 @@ const CityIndex = React.createClass({
     const backgroundImage = "background-image";
     return(
     <div className="city-container">
-    <div className="city-header">
+    <div className="city-header wow fadeInDown">
       <h1 className="find-you">Where can we find you?</h1>
       <p className="choose-city">Choose the city where you'd
       like to join for lunch</p>
@@ -26,7 +26,7 @@ const CityIndex = React.createClass({
 
     {this.state.cities.map( function(city) {
     return (
-      <div className="city" key={city.id}>
+      <div className="city wow fadeInUpBig" key={city.id}>
         <div className="city-image" style={{backgroundImage: `url(${city.image_url})`}}>
           <div className="black">
             <h2 className="city-name">

@@ -8,6 +8,7 @@
   width: 41%;
   height: 160px;
   margin: 10px;
+  transition: ease-in-out all .5s;
 }
 
 .find-you{
@@ -37,6 +38,7 @@
 
 .city:hover{
   color: transparent;
+  transition: ease-in-out all .5s;
 }
 
 .black{
@@ -44,6 +46,8 @@
   height: 100%;
   background-color: black;
   opacity: .5;
+  transition: ease-in-out all .3s;
+
 }
 
 .black:hover{
@@ -68,10 +72,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: ease-in-out all 1s;
+
 }
 
 .city-name:hover{
   opacity: 0.0;
+  transition: ease-in-out all 1s;
 }
 
 /* line 46, /Users/floridakid411/Desktop/TWS/app/assets/stylesheets/cityindex/city_index.scss */

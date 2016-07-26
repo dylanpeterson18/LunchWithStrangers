@@ -61,7 +61,7 @@ const Login = React.createClass({
   render(){
 
     return(
-    <div className="login-form-container">
+    <div className="wow fadeIn login-form-container">
       <h2 className="signup-header"> Hey, stranger! </h2>
       <p className="signup-text"> Sign in to set up your next lunch! </p>
       <div className="login-form">

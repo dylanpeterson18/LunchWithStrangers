@@ -88,8 +88,8 @@ const Dashboard = React.createClass({
 
       return (
       <div className="dashboard">
-        <div className="welcome">
-          <div className="control-panel">
+        <div className="wow zoomInUp welcome">
+          <div className="wow rotateIn control-panel">
             <h1 className="lt-basics">
               Welcome, {user.username}
             </h1>

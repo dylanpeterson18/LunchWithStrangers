@@ -68,7 +68,7 @@ const SignUp = React.createClass({
   render(){
 
     return(
-    <div className="login-form-container">
+    <div className="wow fadeIn login-form-container">
       <form onSubmit={this.handleSubmit}>
         <h2 className="signup-header"> Join for Lunch! </h2>
         <p className="signup-text"> Thousands of strangers

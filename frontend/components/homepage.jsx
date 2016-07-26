@@ -16,7 +16,7 @@ const Homepage = React.createClass({
 
         <div className="one-city-image" style={{backgroundImage: `url("http://res.cloudinary.com/dbewxxs0f/image/upload/v1467705192/friends-at-the-dinner-table_l8s4t6.jpg")`}}>
           <div className="one-city-color">
-            <h2 className="one-city-name" id="homepage-header">Everyone is interesting</h2>
+            <h2 className="one-city-name wow swing" id="homepage-header">Everyone is interesting</h2>
             <p id="homepage-text">But you don't discover that
                     when you're staring at a screen.</p>
                   <Link className="commit" id="home-signup" to={linkLoc}>Let's Get Lunch</Link>
@@ -25,17 +25,17 @@ const Homepage = React.createClass({
 
         <div className="what-is-lt-wrapper">
           <div className="what-is-lt-container">
-            <div className="lt-part">
+            <div className="lt-part wow fadeInUp">
               <h2 className="lt-basics">Show Up</h2>
               <p className="lt-basics-text">You and a few others
               join a host at a lunch spot.</p>
             </div>
-            <div className="lt-part">
+            <div className="lt-part wow fadeInUp">
             <h2 className="lt-basics">Be Present</h2>
               <p className="lt-basics-text">Engage. Be yourself. Meet
               cool people. </p>
             </div>
-            <div className="lt-part">
+            <div className="lt-part wow fadeInUp">
             <h2 className="lt-basics">See What Happens</h2>
               <p className="lt-basics-text">
               Make lifelong friends. Or have one enjoyable lunch.
@@ -46,7 +46,7 @@ const Homepage = React.createClass({
 
 
         <div className="homepage-description">
-          <div className="homepage-part">
+          <div className="homepage-part wow fadeInRightBig">
             <div className="image-container">
             <img className="hp-img" src="http://res.cloudinary.com/dbewxxs0f/image/upload/v1467935462/realpeople-1d5fb20324228744e992569f082415977c4b3799ef7b14cc5922c2dade18f97c_ydaefi.png"></img>
             </div>
@@ -61,7 +61,7 @@ const Homepage = React.createClass({
           </div>
 
 
-          <div className="homepage-part">
+          <div className="homepage-part wow fadeInRightBig">
 
             <div className="basics-container">
               <h2 className="lt-basics">We won't meet otherwise.</h2>
@@ -76,7 +76,7 @@ const Homepage = React.createClass({
             </div>
           </div>
 
-          <div className="homepage-part">
+          <div className="homepage-part wow fadeInRightBig">
             <div className="image-container">
               <img className="hp-img" src="http://res.cloudinary.com/dbewxxs0f/image/upload/v1467935462/highfive-e7a173c8a773070abd084deeac2eb53919a70990425599ed5e7164dc143d45c6_qeyq16.png"></img>
             </div>

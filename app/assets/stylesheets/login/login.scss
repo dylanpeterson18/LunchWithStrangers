@@ -18,7 +18,8 @@
 }
 
 .commit:hover{
-    background-color: #1a81d4;
+    background-color: darkblue;
+    transition: ease-in-out all .5s;
 }
 
 .signup-text{
@@ -71,6 +72,7 @@ form input {
   margin-top: 5px;
   border: none;
   max-width: 400px;
+  transition: ease-in-out all .5s;
 }
 
 
@@ -82,7 +84,7 @@ form input {
 }
 
 #guest-login:hover{
-  background-color: darkorange;
+  background-color: #d65900;
 }
 
 .login-input{

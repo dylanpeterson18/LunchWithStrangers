@@ -1,7 +1,7 @@
-const SessionApiUtil = require('./util/SessionApiUtil.js')
+const SessionApiUtil = require('./util/SessionApiUtil.js');
 const ReactDOM = require('react-dom');
 const React = require('react');
-const SessionActions = require('./actions/session_actions')
+const SessionActions = require('./actions/session_actions');
 const SessionStore = require('./store/session_store');
 
 //components
