@@ -48,6 +48,13 @@ const SignUp = React.createClass({
   formType() {
     return this.props.location.pathname.slice(1);
   },
+  guestLogin(){
+    const guestdata = {
+      username: "TaylorSwift",
+      password: "TaylorSwift"
+    };
+    SessionActions.logIn(guestdata);
+  },
   redirectIfSignedUp() {
     if (SessionStore.isUserLoggedIn()) {
       $.ajax({
