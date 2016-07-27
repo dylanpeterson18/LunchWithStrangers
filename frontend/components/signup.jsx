@@ -102,6 +102,7 @@ const SignUp = React.createClass({
               </select>
             </div>
             <input type="submit" value="Let's Get Lunch" className="commit" />
+            <button className="commit" id="guest-login" onClick={this.guestLogin}>Guest Login</button>
           </div>
       </form>
     </div>

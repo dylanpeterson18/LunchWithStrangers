@@ -14,6 +14,14 @@
 //= require_tree .
  */
 
+ html{
+   height: 100%;
+ }
+
+ #content{
+   position: relative;
+ }
+
 .logo-image{
   width: 80%;
 }
@@ -38,6 +46,7 @@
   line-height: 1.625;
   -webkit-font-smoothing: antialiased;
   text-align: center;
+
 }
 
 input {
@@ -52,12 +61,18 @@ body {
   font-family: "canada-type-gibson", "Gibson", "Helvetica Neue";
   line-height: 1.625;
   -webkit-font-smoothing: antialiased;
+
 }
 
 .footer-stuff p {
   padding-left: 0px;
   margin: auto;
   padding: 0px 20px 30px 40px;
+}
+
+#sticky{
+  position: fixed;
+  bottom: 0;
 }
 
 .header-stuff{

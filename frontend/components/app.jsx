@@ -1,15 +1,24 @@
+
+
 const React = require('react');
 const Header = require('./header');
 const Homepage = require('./homepage');
 
 const App = React.createClass({
 
+
   render(){
+    let sticky= this.props.location.pathname;
+    if(this.props.location.pathname === "/login" || this.props.location.pathname === "/signup"){
+      sticky = "sticky";
+    }
+
+
     return(
     <div>
       <Header/>
       {this.props.children}
-      <div className="footer">
+      <div className="footer" id={sticky}>
         <div className="footer-stuff">
           <div className="logo"/>
           <p>Lunch With Strangers is all about making our cities

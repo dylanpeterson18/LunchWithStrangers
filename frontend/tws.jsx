@@ -28,12 +28,13 @@ const AppRouter = (
   <Router history={ hashHistory }>
     <Route path="/" component={App}>
       <IndexRoute component={Homepage}/>
-      <Route path="/login" component={Login}/>
-      <Route path="/signup" component={SignUp}/>
-      <Route path="/cities" component={CityIndex}/>
-      <Route path="/cities/:id" component={CityShow}/>
-      <Route path="/lunch_events" component={LunchForm}/>
-      <Route path="/dashboard" component={Dashboard}/>
+      <Route path="login" component={Login}/>
+      <Route path="signup" component={SignUp}/>
+      <Route path="cities" component={CityIndex}/>
+      <Route path="cities/:id" component={CityShow}/>
+      <Route path="lunch_events" component={LunchForm}/>
+      <Route path="dashboard" component={Dashboard}/>
+
     </Route>
   </Router>
 );
