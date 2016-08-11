@@ -23,18 +23,21 @@ const CityShow = React.createClass({
     } else {
       hashHistory.push('/login');
     }
-
   },
   onModalClose(){
     this.setState({modalOpen: false});
   },
-  render(){
+  hostEventText(){
     let hostEventText = "hi";
     if(SessionStore.isUserLoggedIn()){
       hostEventText="Host Your Own Lunch";
     } else {
       hostEventText="Sign In To Host Your Own Lunch";
     }
+    return hostEventText;
+  },
+  render(){
+
     if(!this.state.city.id){
       return(<div/>);
     } else {
@@ -49,11 +52,9 @@ const CityShow = React.createClass({
 
         <div className="host-event-container">
           <button id="host-own-lunch-button" className="commit" onClick={this._handleClick}>
-          {hostEventText}
+          {this.hostEventText()}
           </button>
         </div>
-
-
 
         <div className="join-for-lunch-wrapper wow rubberBand">
           <div className="join-for-lunch-container">
